@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; background-color: #080A0E; color: #E1E4EA; }
+      body { overscroll-behavior: none; }
+      ::-webkit-scrollbar { display: none; }
+    }
+    .grid-lines {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+    .technical-border {
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bg": "#080A0E",
+            "surface-subtle": "#0F1218",
+            "surface-panel": "#141820",
+            "surface-high": "#1B202A",
+            "border-hairline": "rgba(255, 255, 255, 0.07)",
+            "border-active": "rgba(56, 189, 248, 0.35)",
+            "cyan-accent": "#38BDF8",
+            "cyan-glow": "rgba(56, 189, 248, 0.12)",
+            "emerald-accent": "#34D399",
+            "text-dim": "#7E8898",
+            "text-muted": "#A2ACB9",
+            "text-primary": "#F1F5F9"
+          },
+          fontFamily: {
+            display: ["Geist", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface-bg font-display text-[#E1E4EA] antialiased selection:bg-cyan-accent/20 selection:text-cyan-accent">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#080A0E]/90 backdrop-blur-md border-b border-border-hairline">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
+<!-- Brand & Title -->
+<a class="flex items-center gap-3.5 group" href="#">
+<div class="w-8 h-8 flex items-center justify-center">
+          https://lh3.googleusercontent.com/aida/AEtjO1Wg2gg8yLWIbe5j1NMgnZoC1474e5l9a4OEvoqCNjvSBR4Bu9MLdU666OIGmJxxSrjePnw7JZjmLRRc80NrPiN75SwwcqzWvWSv3j7WyQ7foa3q4GYeeyaG0a7-TP6IUfSY-4ngFXujBgssfUiN4pdnd_5bANTEGms3O5F6rQ4JwShRYXiVMOsVKYysy1S7XfOV-PI9RY226D0kP1dZrQAs5hKACTshnPDBb5tPSdyzRZmPHMTzjjiwuv9v
+        </div>
+<div class="flex flex-col">
+<span class="font-medium text-[15px] tracking-tight text-white group-hover:text-cyan-accent transition-colors">Alex Rivera</span>
+<span class="font-mono text-[10px] tracking-widest uppercase text-text-dim">Staff Technologist // Spec Sheet</span>
+</div>
+</a>
+<!-- Minimal Navigation Indices -->
+<nav class="hidden md:flex items-center space-x-8 font-mono text-[11px] tracking-wider uppercase text-text-dim">
+<a class="text-white hover:text-cyan-accent transition-colors flex items-center gap-1.5" href="#work">
+<span class="text-cyan-accent/80">01</span><span>Work</span>
+</a>
+<a class="hover:text-white transition-colors flex items-center gap-1.5" href="#architecture">
+<span class="text-text-dim/60">02</span><span>Architecture</span>
+</a>
+<a class="hover:text-white transition-colors flex items-center gap-1.5" href="#specs">
+<span class="text-text-dim/60">03</span><span>Matrix</span>
+</a>
+<a class="hover:text-white transition-colors flex items-center gap-1.5" href="#about">
+<span class="text-text-dim/60">04</span><span>Author</span>
+</a>
+</nav>
+<!-- Telemetry Status & CTA -->
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-2 px-2.5 py-1 border border-border-hairline bg-surface-subtle font-mono text-[10px] uppercase text-text-dim">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-accent animate-pulse"></span>
+<span class="tracking-widest">Available Q2/Q3</span>
+</div>
+<a class="px-3.5 py-1.5 border border-cyan-accent/40 bg-cyan-accent/10 hover:bg-cyan-accent/20 text-cyan-accent font-mono text-[11px] tracking-wider uppercase transition-colors flex items-center gap-1.5" href="mailto:alex@rivera.design">
+<span>Inquire</span>
+<span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="pt-16 w-full flex flex-col">
+<!-- HERO SECTION: ARCHITECTURAL & MONOLITHIC -->
+<section class="relative w-full border-b border-border-hairline grid-lines py-20 lg:py-28 px-6 lg:px-12 overflow-hidden">
+<!-- Ambient Blueprint Coordinates -->
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<!-- Overhead Spec Ledger -->
+<div class="flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-text-dim border-b border-border-hairline pb-4 tracking-wider uppercase">
+<div class="flex items-center gap-3">
+<span class="text-cyan-accent">●</span>
+<span>SYSTEM RUNTIME 2025.1</span>
+<span class="text-border-hairline">|</span>
+<span>LATENCY CRITICAL INTERFACES</span>
+</div>
+<div class="flex items-center gap-6">
+<span>LOC: 37.7749° N, 122.4194° W</span>
+<span class="hidden md:inline text-border-hairline">|</span>
+<span class="hidden md:inline">SPEC: RFC-7724</span>
+</div>
+</div>
+<!-- Hero Primary Statement -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+<div class="lg:col-span-8 flex flex-col gap-6">
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.03] uppercase">
+              Building systems where <span class="text-cyan-accent font-normal italic lowercase font-serif serif">feel</span> is an exact mathematical function.
+            </h1>
+<p class="text-text-muted text-base lg:text-lg max-w-2xl font-normal leading-relaxed">
+              Staff Creative Technologist &amp; Systems Architect. Specializing at the seam of WebGPU pipelines, zero-allocation Rust/WASM kernels, and high-cadence reactive UI systems.
+            </p>
+<!-- Quick Specs Row -->
+<div class="pt-4 flex flex-wrap items-center gap-6 font-mono text-[12px] text-text-dim">
+<div class="flex items-center gap-2">
+<span class="text-white font-semibold">4.8k★</span>
+<span>Github Stars</span>
+</div>
+<span class="text-border-hairline">•</span>
+<div class="flex items-center gap-2">
+<span class="text-emerald-accent font-semibold">&lt;16ms</span>
+<span>Frame Cadence (120hz)</span>
+</div>
+<span class="text-border-hairline">•</span>
+<div class="flex items-center gap-2">
+<span class="text-white font-semibold">99.99%</span>
+<span>Edge SLA</span>
+</div>
+</div>
+</div>
+<!-- Interactive Precision Telemetry Panel -->
+<div class="lg:col-span-4 border border-border-hairline bg-surface-subtle/80 backdrop-blur p-5 flex flex-col gap-4 font-mono text-[11px]">
+<div class="flex items-center justify-between border-b border-border-hairline pb-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-cyan-accent"></span>
+<span class="text-white uppercase tracking-wider font-semibold">ENGINE PROTOCOL</span>
+</div>
+<span class="text-text-dim text-[10px]">WGPU::DIRECT</span>
+</div>
+<!-- Pipeline specs -->
+<div class="flex flex-col gap-2.5 text-text-dim">
+<div class="flex justify-between items-center py-1 border-b border-border-hairline/40">
+<span class="uppercase">Rasterizer Target</span>
+<span class="text-white font-medium">Metal / Vulkan / WebGPU</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-border-hairline/40">
+<span class="uppercase">Spatial Index</span>
+<span class="text-cyan-accent font-medium">Rust Frustum R-Tree</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-border-hairline/40">
+<span class="uppercase">Buffer Allocation</span>
+<span class="text-emerald-accent font-medium">0 bytes / frame</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="uppercase">Jank Probability</span>
+<span class="text-text-muted">0.0001% (p99.9)</span>
+</div>
+</div>
+<!-- Mini Live Shader Code Terminal -->
+<div class="bg-surface-bg p-3 border border-border-hairline text-[10px] text-text-dim leading-relaxed overflow-hidden">
+<div class="text-text-dim/60">// zero-copy ring projection pass</div>
+<div class="text-text-muted"><span class="text-cyan-accent">pub fn</span> render_spatial_batch(</div>
+<div class="pl-3 text-text-dim">&amp;mut self, ctx: &amp;GpuContext</div>
+<div class="text-text-muted">) -&gt; Result&lt;FrameTicket, GpuErr&gt; {</div>
+<div class="pl-3 text-cyan-accent/80">self.matrix_ring.commit_atomic()?;</div>
+<div class="text-text-muted">}</div>
+</div>
+<div class="flex items-center justify-between text-[10px] text-text-dim pt-1">
+<span>HEAP: 14.2 MB RSS</span>
+<span class="text-emerald-accent flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 bg-emerald-accent"></span> SYNCHRONIZED
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 01: EDITORIAL SPOTLIGHT (CASE STUDY 01 - AETHER AI) -->
+<section class="w-full border-b border-border-hairline py-20 lg:py-24 px-6 lg:px-12 bg-surface-bg" id="work">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<!-- Section Header Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-border-hairline pb-4 gap-4">
+<div class="flex items-center gap-3 font-mono text-[11px] text-text-dim uppercase tracking-wider">
+<span class="text-cyan-accent font-semibold">[01] SPOTLIGHT CASE STUDY</span>
+<span class="text-border-hairline">/</span>
+<span>SPATIAL COMPUTING &amp; WASM KERNELS</span>
+</div>
+<div class="font-mono text-[11px] text-text-dim">TIMELINE: 2024–2025 • FOUNDING STAFF ENGINEER</div>
+</div>
+<!-- Full-Width Editorial Feature -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 border border-border-hairline bg-surface-subtle p-6 lg:p-10 relative">
+<!-- Left Column: Problem, System Architecture, & Metrics -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="flex flex-col gap-5">
+<div class="inline-flex items-center gap-2 self-start px-2 py-0.5 border border-cyan-accent/30 bg-cyan-accent/5 text-cyan-accent font-mono text-[10px] uppercase tracking-widest">
+                Acquired 2024 • 400k Active Nodes
+              </div>
+<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-white uppercase leading-none">
+                Aether AI
+              </h2>
+<p class="font-mono text-xs uppercase text-cyan-accent tracking-wider">
+                Infinite Spatial Canvas &amp; Dynamic Graph Compiler
+              </p>
+<p class="text-text-muted text-sm leading-relaxed">
+                Standard HTML/Canvas engines thrash when orchestrating 10,000+ interactive connected graph entities during continuous multi-touch zoom gestures. Aether required an uncompromising architecture capable of real-time topology layout without garbage-collection pauses.
+              </p>
+<!-- Technical Specs Breakdown -->
+<div class="grid grid-cols-2 gap-3 pt-2 font-mono text-[11px]">
+<div class="border border-border-hairline p-2.5 bg-surface-bg">
+<div class="text-text-dim uppercase text-[10px]">Frustum Culling</div>
+<div class="text-white font-semibold mt-1">Rust R-Tree WASM</div>
+</div>
+<div class="border border-border-hairline p-2.5 bg-surface-bg">
+<div class="text-text-dim uppercase text-[10px]">Throughput</div>
+<div class="text-emerald-accent font-semibold mt-1">+340% FPS Pinned</div>
+</div>
+<div class="border border-border-hairline p-2.5 bg-surface-bg">
+<div class="text-text-dim uppercase text-[10px]">Heap Allocation</div>
+<div class="text-cyan-accent font-semibold mt-1">-70% Memory Drop</div>
+</div>
+<div class="border border-border-hairline p-2.5 bg-surface-bg">
+<div class="text-text-dim uppercase text-[10px]">Shader Dispatch</div>
+<div class="text-white font-semibold mt-1">WGSL Instanced</div>
+</div>
+</div>
+</div>
+<!-- Tech Stack Manifest -->
+<div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-1 bg-surface-bg">Rust</span>
+<span class="border border-border-hairline px-2 py-1 bg-surface-bg">WebAssembly</span>
+<span class="border border-border-hairline px-2 py-1 bg-surface-bg">WebGPU</span>
+<span class="border border-border-hairline px-2 py-1 bg-surface-bg">TypeScript</span>
+<span class="border border-border-hairline px-2 py-1 bg-surface-bg">React 19</span>
+</div>
+</div>
+<!-- Right Column: Tangible Architectural Blueprint & Telemetry Inspector -->
+<div class="lg:col-span-7 flex flex-col border border-border-hairline bg-surface-bg p-5 lg:p-6 justify-between gap-6">
+<!-- Canvas Blueprint Schematic -->
+<div class="flex items-center justify-between border-b border-border-hairline pb-3 font-mono text-[10px] text-text-dim">
+<span>SCHEMATIC_REF: WASM-KERNEL-V3.4</span>
+<span class="text-emerald-accent">FRUSTUM_CULL: ACTIVE</span>
+</div>
+<!-- Vector Diagram Canvas Representation -->
+<div class="relative h-64 w-full bg-[#0B0E14] border border-border-hairline/60 overflow-hidden flex items-center justify-center p-6">
+<!-- Grid overlay -->
+<div class="absolute inset-0 grid-lines opacity-60"></div>
+<!-- Blueprint Vector Graph Elements -->
+<svg class="w-full h-full text-text-dim/40" fill="none" viewbox="0 0 540 220">
+<!-- Connective Lines -->
+<path d="M 60 110 L 170 60 L 290 140 L 400 70 L 480 120" stroke="#38BDF8" stroke-dasharray="3 3" stroke-width="1"></path>
+<path d="M 170 60 L 290 60 L 480 120" stroke="#34D399" stroke-width="1"></path>
+<path d="M 60 110 L 290 140" stroke="rgba(255,255,255,0.2)" stroke-width="1"></path>
+<!-- Graph Nodes -->
+<circle cx="60" cy="110" fill="#141820" r="14" stroke="#38BDF8" stroke-width="1.5"></circle>
+<circle cx="170" cy="60" fill="#141820" r="18" stroke="#34D399" stroke-width="1.5"></circle>
+<circle cx="290" cy="140" fill="#141820" r="22" stroke="#38BDF8" stroke-width="1.5"></circle>
+<circle cx="290" cy="60" fill="#141820" r="12" stroke="#E1E4EA" stroke-width="1.5"></circle>
+<circle cx="400" cy="70" fill="#141820" r="16" stroke="#38BDF8" stroke-width="1.5"></circle>
+<circle cx="480" cy="120" fill="#141820" r="15" stroke="#34D399" stroke-width="1.5"></circle>
+<!-- Label Overlays -->
+<text fill="#38BDF8" font-family="monospace" font-size="7" text-anchor="middle" x="60" y="113">N_01</text>
+<text fill="#34D399" font-family="monospace" font-size="8" text-anchor="middle" x="170" y="63">N_02</text>
+<text fill="#38BDF8" font-family="monospace" font-size="9" text-anchor="middle" x="290" y="143">ROOT</text>
+<text fill="#38BDF8" font-family="monospace" font-size="8" text-anchor="middle" x="400" y="73">LEAF</text>
+</svg>
+<!-- Live HUD overlay badge -->
+<div class="absolute bottom-3 left-3 bg-surface-subtle border border-border-hairline px-2.5 py-1 font-mono text-[9px] text-text-dim flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-accent"></span>
+<span>INSTANCED QUAD PIPELINE: 104,288 VERTICES</span>
+</div>
+</div>
+<!-- Architectural Stage Ladder -->
+<div class="grid grid-cols-4 gap-2 font-mono text-[10px]">
+<div class="border border-border-hairline p-2 bg-surface-subtle">
+<div class="text-text-dim">01. CAPTURE</div>
+<div class="text-white mt-1">PointerEvent</div>
+</div>
+<div class="border border-border-hairline p-2 bg-surface-subtle">
+<div class="text-cyan-accent">02. PRUNE</div>
+<div class="text-white mt-1">Frustum WASM</div>
+</div>
+<div class="border border-border-hairline p-2 bg-surface-subtle">
+<div class="text-emerald-accent">03. BUFFER</div>
+<div class="text-white mt-1">Direct Ring Map</div>
+</div>
+<div class="border border-border-hairline p-2 bg-surface-subtle">
+<div class="text-text-dim">04. FLUSH</div>
+<div class="text-white mt-1">120 FPS WGSL</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: ASYMMETRIC CASE STUDIES (KINETIC & SYNAPSE & CHRONO) -->
+<section class="w-full border-b border-border-hairline py-20 lg:py-24 px-6 lg:px-12 bg-surface-subtle">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-border-hairline pb-4 gap-4">
+<div class="flex items-center gap-3 font-mono text-[11px] text-text-dim uppercase tracking-wider">
+<span class="text-cyan-accent font-semibold">[02] PRODUCTION PLATFORMS</span>
+<span class="text-border-hairline">/</span>
+<span>SYSTEM RUNTIMES &amp; COMPILERS</span>
+</div>
+<div class="font-mono text-[11px] text-text-dim">HIGH-THROUGHPUT ARTIFACTS</div>
+</div>
+<!-- Asymmetric Layout: Project 2 (Kinetic Compiler) Full Spec Narrative -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 border border-border-hairline bg-surface-bg p-6 lg:p-8">
+<div class="lg:col-span-7 flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 font-mono text-[10px] text-text-dim uppercase">
+<span class="text-white font-semibold">02 // COMPILER ARCHITECTURE</span>
+<span>•</span>
+<span>OPEN SOURCE</span>
+<span>•</span>
+<span class="text-cyan-accent">12,000+ GITHUB STARS</span>
+</div>
+<h3 class="text-2xl lg:text-3xl font-bold uppercase text-white tracking-tight">
+                Kinetic — High-Velocity Design Token Compiler
+              </h3>
+<p class="text-text-muted text-sm leading-relaxed">
+                Authored a sub-millisecond Rust compiler converting Figma Variables and DTCG multi-tier tokens into native CSS custom properties, Tailwind v4 configurations, Swift enum registries, and Android Jetpack Compose classes. Eliminates runtime token translation overhead.
+              </p>
+</div>
+<!-- Terminal Benchmarks Display -->
+<div class="bg-surface-subtle border border-border-hairline p-4 font-mono text-[11px] leading-relaxed">
+<div class="flex items-center justify-between text-text-dim text-[10px] border-b border-border-hairline pb-2 mb-2">
+<span>CLI EXECUTION BENCHMARK: kinetic build --release</span>
+<span class="text-emerald-accent">100% CACHE HIT</span>
+</div>
+<div class="text-emerald-accent">&gt; parsing 4,820 figma design tokens... [0.41ms]</div>
+<div class="text-text-muted">&gt; AST transformation &amp; tree-shaking pass... [0.73ms]</div>
+<div class="text-text-muted">&gt; emit: styles.css, tokens.swift, tokens.kt... [0.75ms]</div>
+<div class="text-cyan-accent mt-1">&gt; total duration: 1.89ms (4.6x faster than Style Dictionary)</div>
+</div>
+<div class="flex flex-wrap gap-2 font-mono text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5">Rust</span>
+<span class="border border-border-hairline px-2 py-0.5">Figma REST API</span>
+<span class="border border-border-hairline px-2 py-0.5">PostCSS</span>
+<span class="border border-border-hairline px-2 py-0.5">AST Generation</span>
+<span class="border border-border-hairline px-2 py-0.5">Swift/Kotlin Target</span>
+</div>
+</div>
+<!-- Spec Sheet Details -->
+<div class="lg:col-span-5 border border-border-hairline bg-surface-subtle p-5 flex flex-col justify-between gap-4 font-mono text-[11px]">
+<div class="text-white uppercase font-semibold text-xs border-b border-border-hairline pb-2">
+              Compiler Output Matrix
+            </div>
+<div class="flex flex-col gap-3 text-text-dim text-[11px]">
+<div class="flex justify-between border-b border-border-hairline/40 pb-1.5">
+<span>Memory Allocation</span>
+<span class="text-white">Zero Heap Fragmentation</span>
+</div>
+<div class="flex justify-between border-b border-border-hairline/40 pb-1.5">
+<span>Adoption</span>
+<span class="text-cyan-accent">Fortune 500 Systems</span>
+</div>
+<div class="flex justify-between border-b border-border-hairline/40 pb-1.5">
+<span>Conformance</span>
+<span class="text-white">DTCG Community Spec</span>
+</div>
+<div class="flex justify-between">
+<span>Distribution</span>
+<span class="text-emerald-accent">Homebrew / Cargo / NPM</span>
+</div>
+</div>
+<div class="p-3 border border-border-hairline bg-surface-bg flex items-center justify-between">
+<span class="text-[10px] text-text-dim uppercase tracking-wider">GitHub Trend</span>
+<a class="text-cyan-accent hover:underline flex items-center gap-1 text-[11px]" href="#">
+<span>github.com/alexrivera/kinetic</span>
+<span class="material-symbols-outlined text-[12px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Split 2-Column Row for Chrono & Synapse -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Case 03: Chrono -->
+<div class="border border-border-hairline bg-surface-bg p-6 flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between font-mono text-[10px] text-text-dim uppercase">
+<span>[03] DISTRIBUTED SYSTEMS</span>
+<span class="text-emerald-accent">2.4B EVENTS / DAY</span>
+</div>
+<h3 class="text-xl font-bold uppercase text-white tracking-tight">
+                Chrono — High-Frequency Distributed Observability
+              </h3>
+<p class="text-text-muted text-xs leading-relaxed">
+                Engineered eBPF sensor telemetry streaming into ClickHouse sharded clusters. Delivered real-time observability telemetry across multi-cloud Kubernetes fleets, lowering p99 query latency from 850ms down to 24ms.
+              </p>
+</div>
+<div class="border border-border-hairline bg-surface-subtle p-3 font-mono text-[11px]">
+<div class="flex justify-between text-text-dim text-[10px] pb-1 border-b border-border-hairline/40">
+<span>p99 Latency SLA</span>
+<span class="text-emerald-accent font-semibold">24ms (-97%)</span>
+</div>
+<div class="flex justify-between text-text-dim text-[10px] pt-1">
+<span>Regions</span>
+<span class="text-white">14 Global Edges</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5">Go</span>
+<span class="border border-border-hairline px-2 py-0.5">ClickHouse</span>
+<span class="border border-border-hairline px-2 py-0.5">eBPF</span>
+<span class="border border-border-hairline px-2 py-0.5">Kafka</span>
+</div>
+</div>
+<!-- Case 04: Synapse -->
+<div class="border border-border-hairline bg-surface-bg p-6 flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between font-mono text-[10px] text-text-dim uppercase">
+<span>[04] 3D COLLABORATION</span>
+<span class="text-cyan-accent">PRODUCT HUNT #1</span>
+</div>
+<h3 class="text-xl font-bold uppercase text-white tracking-tight">
+                Synapse — Spatial Design Multiplayer Runtime
+              </h3>
+<p class="text-text-muted text-xs leading-relaxed">
+                Multi-user WebGL spatial playground. Implemented zero-allocation raymarching GLSL shaders and real-time state synchronization via Yjs CRDTs over multiplexed WebSockets for low-overhead multi-peer editing.
+              </p>
+</div>
+<div class="border border-border-hairline bg-surface-subtle p-3 font-mono text-[11px]">
+<div class="flex justify-between text-text-dim text-[10px] pb-1 border-b border-border-hairline/40">
+<span>Delta Reconciliation</span>
+<span class="text-cyan-accent font-semibold">&lt;8ms (P2P Mesh)</span>
+</div>
+<div class="flex justify-between text-text-dim text-[10px] pt-1">
+<span>Display Context</span>
+<span class="text-white">WebGL 2.0 / GLSL</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1.5 font-mono text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5">Three.js</span>
+<span class="border border-border-hairline px-2 py-0.5">GLSL</span>
+<span class="border border-border-hairline px-2 py-0.5">CRDT (Yjs)</span>
+<span class="border border-border-hairline px-2 py-0.5">WebSockets</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: ARCHITECTURAL MATRIX & CAPABILITIES (SPEC SHEET STYLE) -->
+<section class="w-full border-b border-border-hairline py-20 lg:py-24 px-6 lg:px-12 bg-surface-bg" id="specs">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-border-hairline pb-4 gap-4">
+<div class="flex items-center gap-3 font-mono text-[11px] text-text-dim uppercase tracking-wider">
+<span class="text-cyan-accent font-semibold">[03] CAPABILITY INDEX</span>
+<span class="text-border-hairline">/</span>
+<span>SYSTEM SPECIFICATION &amp; METHODOLOGY</span>
+</div>
+<div class="font-mono text-[11px] text-text-dim">REV: 2025.A</div>
+</div>
+<div class="flex flex-col">
+<h2 class="text-3xl lg:text-4xl font-bold uppercase text-white tracking-tight max-w-2xl">
+            Engineering Spec-Sheet &amp; Competency Matrix
+          </h2>
+<p class="text-text-muted text-sm mt-2 max-w-xl">
+            Strict engineering standards applied across runtime performance, low-level binary protocols, and tactile design engineering.
+          </p>
+</div>
+<!-- Tabular Whitepaper-style Competency Matrix -->
+<div class="border border-border-hairline divide-y divide-border-hairline bg-surface-subtle font-mono text-[12px]">
+<!-- Row 1: Low-Level & Graphics -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-5 gap-4 items-start">
+<div class="md:col-span-3 text-white font-semibold flex items-center gap-2">
+<span class="text-cyan-accent">01.</span>
+<span class="uppercase">GRAPHICS &amp; RUNTIMES</span>
+</div>
+<div class="md:col-span-5 text-text-muted text-xs font-sans leading-relaxed">
+              Custom WebGPU pipelines, WGSL shader optimization, WebAssembly binary compilation, raymarching, zero-allocation memory buffers, spatial indexing via R-Trees and BVH.
+            </div>
+<div class="md:col-span-4 flex flex-wrap gap-1.5 text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">WebGPU</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Rust / WASM</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">WGSL</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Three.js</span>
+</div>
+</div>
+<!-- Row 2: Frontend Systems Architecture -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-5 gap-4 items-start">
+<div class="md:col-span-3 text-white font-semibold flex items-center gap-2">
+<span class="text-cyan-accent">02.</span>
+<span class="uppercase">UI SYSTEMS ARCHITECTURE</span>
+</div>
+<div class="md:col-span-5 text-text-muted text-xs font-sans leading-relaxed">
+              Zero-runtime styling engines, deterministic state machines, concurrent rendering loops, React Server Components (RSC), micro-frontends, streaming SSR, and strict TypeScript soundness.
+            </div>
+<div class="md:col-span-4 flex flex-wrap gap-1.5 text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">React 19</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Next.js App Router</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">TypeScript</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">XState</span>
+</div>
+</div>
+<!-- Row 3: Distributed Infrastructure -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-5 gap-4 items-start">
+<div class="md:col-span-3 text-white font-semibold flex items-center gap-2">
+<span class="text-cyan-accent">03.</span>
+<span class="uppercase">DISTRIBUTED CLOUD &amp; DATA</span>
+</div>
+<div class="md:col-span-5 text-text-muted text-xs font-sans leading-relaxed">
+              Sub-second OLAP telemetry, eBPF telemetry kernel sensors, Kafka event pipelines, partitioned relational schemas, Edge compute isolates, and declarative IaC.
+            </div>
+<div class="md:col-span-4 flex flex-wrap gap-1.5 text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">ClickHouse</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Go</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">eBPF</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Kafka</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Cloudflare Workers</span>
+</div>
+</div>
+<!-- Row 4: Interaction Craft -->
+<div class="grid grid-cols-1 md:grid-cols-12 p-5 gap-4 items-start">
+<div class="md:col-span-3 text-white font-semibold flex items-center gap-2">
+<span class="text-cyan-accent">04.</span>
+<span class="uppercase">TACTILE INTERACTION CRAFT</span>
+</div>
+<div class="md:col-span-5 text-text-muted text-xs font-sans leading-relaxed">
+              Physics-based mass-spring damper curves, headless design token compilers, WCAG AAA accessibility, spatial input gesture reconciliation, custom typography engineering.
+            </div>
+<div class="md:col-span-4 flex flex-wrap gap-1.5 text-[10px] text-text-dim">
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Design Tokens</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Spring Physics</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">WCAG AAA</span>
+<span class="border border-border-hairline px-2 py-0.5 bg-surface-bg">Figma REST API</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: CAREER RECORD & PROGRESSION -->
+<section class="w-full border-b border-border-hairline py-20 lg:py-24 px-6 lg:px-12 bg-surface-subtle" id="architecture">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-border-hairline pb-4 gap-4">
+<div class="flex items-center gap-3 font-mono text-[11px] text-text-dim uppercase tracking-wider">
+<span class="text-cyan-accent font-semibold">[04] TRACK RECORD</span>
+<span class="text-border-hairline">/</span>
+<span>SYSTEM LEADERSHIP &amp; ENGINEERING TENURE</span>
+</div>
+<div class="font-mono text-[11px] text-text-dim">TOTAL EXPERIENCE: 8+ YEARS</div>
+</div>
+<!-- Career Table List -->
+<div class="border border-border-hairline divide-y divide-border-hairline bg-surface-bg font-mono text-[12px]">
+<!-- Role 01 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-subtle transition-colors">
+<div class="flex flex-col gap-1 max-w-xl">
+<div class="flex items-center gap-3">
+<span class="text-white font-bold text-sm uppercase">Staff Creative Technologist</span>
+<span class="px-1.5 py-0.5 bg-cyan-accent/10 border border-cyan-accent/30 text-cyan-accent text-[9px]">PRESENT</span>
+</div>
+<div class="text-cyan-accent text-xs">Veloce Labs — San Francisco, CA</div>
+<p class="font-sans text-xs text-text-muted mt-1 leading-relaxed">
+                Directing the WebGPU acceleration engine and headless compiler suite. Leading architecture across 14 frontend and graphics engineers with zero-regression delivery record.
+              </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1 text-text-dim text-[11px]">
+<span class="text-white font-medium">2023 — CURRENT</span>
+<span class="text-emerald-accent">Pin 60-120 FPS Systems</span>
+</div>
+</div>
+<!-- Role 02 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-subtle transition-colors">
+<div class="flex flex-col gap-1 max-w-xl">
+<span class="text-white font-bold text-sm uppercase">Senior Frontend Systems Engineer</span>
+<div class="text-cyan-accent text-xs">HyperGraph — New York / Remote</div>
+<p class="font-sans text-xs text-text-muted mt-1 leading-relaxed">
+                Led frontend architecture for 120,000 enterprise telemetry clients. Replaced monolithic client state with streaming SSR, reducing TTI from 3.8s down to 1.4s.
+              </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1 text-text-dim text-[11px]">
+<span class="text-white font-medium">2021 — 2023</span>
+<span class="text-text-muted">TTI Cut By 62%</span>
+</div>
+</div>
+<!-- Role 03 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-subtle transition-colors">
+<div class="flex flex-col gap-1 max-w-xl">
+<span class="text-white font-bold text-sm uppercase">Creative Technologist &amp; Product Designer</span>
+<div class="text-cyan-accent text-xs">Studio Modus — San Francisco, CA</div>
+<p class="font-sans text-xs text-text-muted mt-1 leading-relaxed">
+                Engineered 3D web applications, bespoke configurators, and micro-interaction design languages for clients including Stripe, Figma, and Rivian.
+              </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1 text-text-dim text-[11px]">
+<span class="text-white font-medium">2019 — 2021</span>
+<span class="text-cyan-accent">3x Awwwards SOTD</span>
+</div>
+</div>
+<!-- Role 04 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-subtle transition-colors">
+<div class="flex flex-col gap-1 max-w-xl">
+<span class="text-white font-bold text-sm uppercase">Software Engineer</span>
+<div class="text-cyan-accent text-xs">Nucleus Cloud — Seattle, WA</div>
+<p class="font-sans text-xs text-text-muted mt-1 leading-relaxed">
+                Contributed to distributed query evaluation kernels and network logging collectors handling multi-gigabit ingress streams. Authored 4 internal RFCs.
+              </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1 text-text-dim text-[11px]">
+<span class="text-white font-medium">2017 — 2019</span>
+<span class="text-text-dim">4 RFC Specifications</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: EDITORIAL PORTRAIT & CRAFT PROFILE -->
+<section class="w-full border-b border-border-hairline py-20 lg:py-24 px-6 lg:px-12 bg-surface-bg" id="about">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Portrait Image Column (Strict editorial layout) -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-md border border-border-hairline bg-surface-subtle p-3">
+<div class="relative aspect-square w-full overflow-hidden bg-black">
+<img alt="Alex Rivera - Staff Creative Technologist and Systems Architect" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1VkCmytw81SZ1urwBrZqymR-_Tjxw6l2YQnszheCHwJ5DH147qa17kOtJ49IF91kb8ViWx2jnuPgZ8fzo3cGK6bQ4Dba3HH79sB0nDMTlpWjDw5F185lH5U-_vDh8XA_snLrXxOgjAwpkNSaLE1d7Blqw0swlq_SS7_YWcBy1770T8tsVBwAyrTyitax0UIQMgnF7I93fjbrrsyF9BFdst2NmxrBsGqRadKbrdbSFNlxiBMo_G9FGRKzvLj"/>
+<!-- Subtle hairline reticle overlay -->
+<div class="absolute inset-0 pointer-events-none border border-white/10"></div>
+<div class="absolute top-2 left-2 font-mono text-[9px] text-white/70 bg-black/60 px-1.5 py-0.5">
+                FIG. 04 — AUTHOR PORTRAIT
+              </div>
+</div>
+<!-- Ledger Beneath Image -->
+<div class="mt-3 flex items-center justify-between font-mono text-[10px] text-text-dim pt-1 border-t border-border-hairline">
+<span class="text-white font-medium">ALEX RIVERA</span>
+<span>SAN FRANCISCO, CA</span>
+<span class="text-cyan-accent">37.7749° N</span>
+</div>
+</div>
+</div>
+<!-- Editorial Manifesto & Physical Craft Column -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="flex items-center gap-3 font-mono text-[11px] text-text-dim uppercase tracking-wider">
+<span class="text-cyan-accent font-semibold">[05] BEHIND THE TERMINAL</span>
+<span class="text-border-hairline">/</span>
+<span>PHILOSOPHY &amp; CRAFT</span>
+</div>
+<h2 class="text-3xl lg:text-4xl font-bold uppercase tracking-tight text-white leading-tight">
+            Curiosity across physical optics, modular analog acoustics, and digital execution.
+          </h2>
+<p class="text-text-muted text-sm leading-relaxed font-sans">
+            Software is tangible physical material. When I am not optimizing frame cadence or designing compiler passes, I study Buchla and Eurorack analog sound synthesis, capture 35mm monochrome photography with manual mechanical rangefinders, and dissect architectural theory.
+          </p>
+<!-- Core Axioms -->
+<div class="border border-border-hairline divide-y divide-border-hairline bg-surface-subtle font-mono text-[11px] mt-2">
+<div class="p-3.5 flex items-start gap-3">
+<span class="text-cyan-accent">01/</span>
+<div>
+<span class="text-white font-semibold uppercase">Tactility over Decor:</span>
+<span class="text-text-muted font-sans text-xs ml-1">Speed and feedback latency define emotional resonance more than static ornament.</span>
+</div>
+</div>
+<div class="p-3.5 flex items-start gap-3">
+<span class="text-cyan-accent">02/</span>
+<div>
+<span class="text-white font-semibold uppercase">Zero Waste Execution:</span>
+<span class="text-text-muted font-sans text-xs ml-1">Do not burden the user's battery or CPU with unnecessary abstractions. Keep the pipeline pure.</span>
+</div>
+</div>
+<div class="p-3.5 flex items-start gap-3">
+<span class="text-cyan-accent">03/</span>
+<div>
+<span class="text-white font-semibold uppercase">Radical Public Openness:</span>
+<span class="text-text-muted font-sans text-xs ml-1">Complex systems improve when internal architecture is documented, tested, and shared publicly.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06: ENDORSEMENT / TESTIMONIAL -->
+<section class="w-full border-b border-border-hairline py-16 px-6 lg:px-12 bg-surface-subtle">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-2 font-mono text-[11px] text-text-dim uppercase tracking-wider">
+          PEER APPRAISAL //
+        </div>
+<div class="lg:col-span-10 flex flex-col gap-4 border-l border-border-hairline pl-6 lg:pl-10">
+<blockquote class="text-xl lg:text-2xl font-light text-white leading-relaxed italic">
+            “Alex operates in that rare 1% intersection of uncompromising aesthetic discipline and low-level graphics engineering capability. They don't just ship interfaces; they build tools that upgrade how the entire organization builds software.”
+          </blockquote>
+<div class="flex items-center gap-3 font-mono text-[11px]">
+<span class="text-white font-semibold uppercase">Elena Rostova</span>
+<span class="text-border-hairline">•</span>
+<span class="text-text-dim">VP of Product Engineering, HyperGraph</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 07: BOLD FINAL INQUIRY & CONTACT LEDGER -->
+<section class="w-full py-20 lg:py-28 px-6 lg:px-12 bg-surface-bg grid-lines">
+<div class="max-w-7xl mx-auto border border-border-hairline bg-surface-subtle p-8 lg:p-14 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<div class="flex items-center gap-2 font-mono text-[11px] text-emerald-accent uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-emerald-accent"></span>
+<span>COMMUNICATION CHANNEL OPEN</span>
+</div>
+<h2 class="text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white">
+              Have an ambitious system worth building?
+            </h2>
+<p class="text-text-muted text-sm sm:text-base max-w-xl font-sans leading-relaxed">
+              Accepting select staff-level technical advisory, founding architecture engagements, and graphics platform leadership roles for 2025.
+            </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-3 font-mono text-[11px]">
+<!-- Direct Email Block -->
+<div class="border border-border-hairline bg-surface-bg p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[9px] uppercase text-text-dim tracking-wider">DIRECT EMAIL</span>
+<span class="text-white font-medium select-all">alex@rivera.design</span>
+</div>
+<button class="p-2 border border-border-hairline text-text-dim hover:text-white transition-colors" id="copy-email-btn" title="Copy Address">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+</div>
+<!-- Schedule Intro -->
+<a class="w-full py-3.5 border border-cyan-accent bg-cyan-accent hover:bg-cyan-accent/90 text-[#080A0E] font-mono font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all" href="mailto:alex@rivera.design?subject=Inquiry%20via%20Spec%20Sheet">
+<span>Initiate Transmission</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+<!-- Technical Key Details -->
+<div class="flex items-center justify-between text-[10px] text-text-dim pt-1 px-1">
+<span>PGP: 0x9B4E281F</span>
+<span class="text-emerald-accent">TURNAROUND &lt; 24H</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- REFINED SPEC SHEET FOOTER -->
+<footer class="w-full border-t border-border-hairline bg-surface-bg py-12 px-6 lg:px-12 font-mono text-[11px] text-text-dim">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col sm:flex-row items-center gap-4">
+<div class="w-6 h-6 flex items-center justify-center">
+          https://lh3.googleusercontent.com/aida/AEtjO1Wg2gg8yLWIbe5j1NMgnZoC1474e5l9a4OEvoqCNjvSBR4Bu9MLdU666OIGmJxxSrjePnw7JZjmLRRc80NrPiN75SwwcqzWvWSv3j7WyQ7foa3q4GYeeyaG0a7-TP6IUfSY-4ngFXujBgssfUiN4pdnd_5bANTEGms3O5F6rQ4JwShRYXiVMOsVKYysy1S7XfOV-PI9RY226D0kP1dZrQAs5hKACTshnPDBb5tPSdyzRZmPHMTzjjiwuv9v
+        </div>
+<span>© 2025 ALEX RIVERA. ALL SPECIFICATIONS RESERVED.</span>
+</div>
+<div class="flex items-center space-x-6 text-[11px]">
+<a class="hover:text-white transition-colors" href="https://github.com" target="_blank">GITHUB</a>
+<a class="hover:text-white transition-colors" href="https://read.cv" target="_blank">READ.CV</a>
+<a class="hover:text-white transition-colors" href="https://linkedin.com" target="_blank">LINKEDIN</a>
+<a class="hover:text-white transition-colors" href="https://twitter.com" target="_blank">X / TWITTER</a>
+</div>
+<div class="text-[10px] text-text-dim/60">
+        400.00 FPS PINNED // ENGINE SPEC 3.4
+      </div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const copyBtn = document.getElementById('copy-email-btn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText('alex@rivera.design').then(() => {
+            const icon = copyBtn.querySelector('.material-symbols-outlined');
+            if (icon) {
+              icon.textContent = 'check';
+              setTimeout(() => {
+                icon.textContent = 'content_copy';
+              }, 2000);
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body></html>

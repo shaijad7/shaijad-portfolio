@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "outline-variant": "#3e484f",
+        "secondary-container": "#0566d9",
+        "on-error": "#690005",
+        "on-background": "#e1e2ea",
+        "inverse-surface": "#e1e2ea",
+        "surface-dim": "#111319",
+        "surface": "#111319",
+        "secondary": "#adc6ff",
+        "background": "#111319",
+        "on-primary-fixed": "#001e2c",
+        "on-secondary": "#002e6a",
+        "surface-bright": "#36393f",
+        "surface-container-low": "#191c21",
+        "inverse-primary": "#00668a",
+        "on-tertiary-fixed-variant": "#005236",
+        "on-secondary-fixed-variant": "#004395",
+        "on-tertiary-fixed": "#002113",
+        "tertiary": "#56e5a9",
+        "surface-tint": "#7bd0ff",
+        "error-container": "#93000a",
+        "primary-container": "#38bdf8",
+        "primary-fixed": "#c4e7ff",
+        "primary": "#8ed5ff",
+        "secondary-fixed-dim": "#adc6ff",
+        "on-primary": "#00354a",
+        "tertiary-fixed-dim": "#4edea3",
+        "error": "#ffb4ab",
+        "on-tertiary": "#003824",
+        "outline": "#87929a",
+        "on-tertiary-container": "#004e34",
+        "on-primary-fixed-variant": "#004c69",
+        "surface-container": "#1d2025",
+        "secondary-fixed": "#d8e2ff",
+        "on-secondary-container": "#e6ecff",
+        "surface-container-high": "#272a30",
+        "surface-container-highest": "#32353b",
+        "surface-variant": "#32353b",
+        "tertiary-fixed": "#6ffbbe",
+        "on-primary-container": "#004965",
+        "inverse-on-surface": "#2e3036",
+        "primary-fixed-dim": "#7bd0ff",
+        "surface-container-lowest": "#0b0e13",
+        "tertiary-container": "#30c88f",
+        "on-surface": "#e1e2ea",
+        "on-surface-variant": "#bdc8d1",
+        "on-error-container": "#ffdad6",
+        "on-secondary-fixed": "#001a42"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "space-xs": "0.25rem",
+        "gutter-mobile": "1rem",
+        "gutter": "1.5rem",
+        "margin": "3rem",
+        "space-lg": "1.5rem",
+        "space-xl": "2.5rem",
+        "space-sm": "0.5rem",
+        "space-md": "1rem",
+        "margin-mobile": "1.25rem"
+      },
+      "fontFamily": {
+        "headline-sm": [
+          "Geist"
+        ],
+        "body-sm": [
+          "JetBrains Mono"
+        ],
+        "display-mobile": [
+          "Geist"
+        ],
+        "body-lg": [
+          "JetBrains Mono"
+        ],
+        "body-md": [
+          "JetBrains Mono"
+        ],
+        "headline-md": [
+          "Geist"
+        ],
+        "headline-lg": [
+          "Geist"
+        ],
+        "display": [
+          "Geist"
+        ],
+        "code-inline": [
+          "JetBrains Mono"
+        ],
+        "label-mono": [
+          "JetBrains Mono"
+        ],
+        "headline-lg-mobile": [
+          "Geist"
+        ]
+      },
+      "fontSize": {
+        "headline-sm": [
+          "1.25rem",
+          {
+            "lineHeight": "1.35",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "500"
+          }
+        ],
+        "body-sm": [
+          "0.75rem",
+          {
+            "lineHeight": "1.5",
+            "letterSpacing": "0.01em",
+            "fontWeight": "400"
+          }
+        ],
+        "display-mobile": [
+          "2.75rem",
+          {
+            "lineHeight": "1.1",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "600"
+          }
+        ],
+        "body-lg": [
+          "1rem",
+          {
+            "lineHeight": "1.65",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "400"
+          }
+        ],
+        "body-md": [
+          "0.875rem",
+          {
+            "lineHeight": "1.6",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-md": [
+          "1.75rem",
+          {
+            "lineHeight": "1.25",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-lg": [
+          "2.5rem",
+          {
+            "lineHeight": "1.15",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "600"
+          }
+        ],
+        "display": [
+          "4.5rem",
+          {
+            "lineHeight": "1.05",
+            "letterSpacing": "-0.04em",
+            "fontWeight": "600"
+          }
+        ],
+        "code-inline": [
+          "0.8125rem",
+          {
+            "lineHeight": "1.4",
+            "letterSpacing": "0em",
+            "fontWeight": "400"
+          }
+        ],
+        "label-mono": [
+          "0.75rem",
+          {
+            "lineHeight": "1",
+            "letterSpacing": "0.06em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-lg-mobile": [
+          "1.75rem",
+          {
+            "lineHeight": "1.2",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "600"
+          }
+        ]
+      }
+    }
+  }
+};</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-16 max-w-7xl mx-auto px-gutter-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="work" href="#"><img alt="Alex Rivera Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wg2gg8yLWIbe5j1NMgnZoC1474e5l9a4OEvoqCNjvSBR4Bu9MLdU666OIGmJxxSrjePnw7JZjmLRRc80NrPiN75SwwcqzWvWSv3j7WyQ7foa3q4GYeeyaG0a7-TP6IUfSY-4ngFXujBgssfUiN4pdnd_5bANTEGms3O5F6rQ4JwShRYXiVMOsVKYysy1S7XfOV-PI9RY226D0kP1dZrQAs5hKACTshnPDBb5tPSdyzRZmPHMTzjjiwuv9v"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight group-hover:text-primary transition-colors">Alex Rivera</span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider text-[10px]">Creative Technologist</span></div></a></div><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container-low/60 rounded-full border border-outline-variant/30" data-active-classes="bg-surface-container-highest text-primary font-medium"><a aria-current="page" class="px-3 py-1.5 rounded-full uppercase transition-colors bg-surface-container-highest text-primary font-medium" data-path="work" href="#">Work</a><a class="px-3 py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="experience" href="#">Experience</a><a class="px-3 py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="stack" href="#">Stack</a><a class="px-3 py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="principles" href="#">Principles</a><a class="px-3 py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="writing" href="#">Writing</a><a class="px-3 py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/40"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-mono text-label-mono text-tertiary uppercase tracking-wider text-[11px]">Available Q2/Q3</span></div><a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-mono text-label-mono font-medium hover:bg-primary transition-colors" href="#"><span class="text-[11px] uppercase tracking-wider">Resume</span><span class="material-symbols-outlined text-[14px]">north_east</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwU-qZO_I-VLBwFxGr57S5vGoCVZnQ2sm2g7HwTUBlGi5HhefWMOUYTUNp9BYJBkIVRM3ficAlKAK50Q-XEIbuPXtVck8RovAJnUka2sp-PYKUdhOhv-awQAoem7qmDwv8Ae_fR41rqMtFhJG4fy8taB-QDO8g8gFwqwmWr5yKaI5AVjPNz9XHON5yuBlvOgCsJ2aPEpYQ56yom9lI7Cn6T8_fhVC9we7a7tLktQsRQbpezQo0lu-ktQ"/></div></div></header><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP HERO AMBIENCE & SECTION -->
+<section class="relative w-full overflow-hidden px-gutter-mobile lg:px-margin pt- space-md pb-space-xl">
+<!-- Ambient light glow behind hero -->
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary-container/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 left-10 w-72 h-72 bg-tertiary/5 blur-[100px] rounded-full pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Left Column: Editorial Headline & Actions -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Precision status pill -->
+<div class="inline-flex items-center gap-2.5 self-start px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-mono text-label-mono text-tertiary uppercase tracking-wider text-[11px]">
+            AVAILABLE FOR HIGH-IMPACT ROLES &amp; SELECTIVE ADVISORY
+          </span>
+</div>
+<!-- Huge Editorial Display Headline -->
+<h1 class="font-display text-headline-lg lg:text-display font-semibold tracking-tight text-on-surface leading-[1.05]">
+          I'm Alex Rivera.<br/>
+<span class="text-on-surface-variant font-medium">I build digital products that are</span>
+<span class="text-primary-container">fast</span>, 
+          <span class="text-on-surface">useful</span>, 
+          <span class="text-on-surface-variant">&amp; beautifully engineered.</span>
+</h1>
+<!-- Short positioning narrative -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Specializing at the intersection of systems engineering, WebGL graphics, and high-performance UI architecture. Former tech lead at NextGen AI and senior frontend systems at HyperGraph.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm pt-2">
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-on-surface text-surface-container-lowest font-label-mono text-label-mono font-semibold uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md" href="#work">
+<span>Explore Selected Work</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-mono text-label-mono uppercase tracking-wider transition-all" href="#architecture">
+<span class="material-symbols-outlined text-primary text-[16px]">terminal</span>
+<span>Review Technical Architecture</span>
+</a>
+</div>
+<!-- Metric Telemetry Strip -->
+<div class="grid grid-cols-3 gap-space-sm pt-4 mt-2 max-w-xl">
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[10px]">Open Source</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">4.8k★</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px]">Across tools &amp; CLIs</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[10px]">Frame Budget</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-tertiary">&lt;16ms</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px]">60-120fps pipelines</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[10px]">Reliability SLA</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">99.99%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80 text-[11px]">Global edge runtime</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive System Engine Monitor Terminal -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="w-full bg-surface-container rounded-xl shadow-xl overflow-hidden backdrop-blur-xl">
+<!-- Terminal Header Bar -->
+<div class="px-4 py-3 bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary/70"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary/70"></span>
+<span class="ml-2 font-label-mono text-[11px] text-on-surface-variant">runtime://engine.core.v3</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-mono text-[10px] text-tertiary bg-surface-container-lowest px-2 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>LIVE TELEMETRY</span>
+</div>
+</div>
+<!-- Telemetry Status Grid -->
+<div class="grid grid-cols-2 gap-2 p-4 bg-surface-container-lowest/60">
+<div class="p-2.5 bg-surface-container-low rounded flex flex-col">
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">Shader Pipeline</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">WebGPU / WGSL</span>
+<span class="text-[10px] text-tertiary font-label-mono px-1.5 py-0.5 bg-tertiary/10 rounded">ACTIVE</span>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container-low rounded flex flex-col">
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">AST Compiler</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">WASM JIT</span>
+<span class="text-[10px] text-primary-container font-label-mono px-1.5 py-0.5 bg-primary-container/10 rounded">0.42ms</span>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container-low rounded flex flex-col">
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">Memory Heap</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code-inline text-code-inline text-on-surface font-semibold">14.2 MB RSS</span>
+<span class="text-[10px] text-secondary font-label-mono">OPTIMAL</span>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container-low rounded flex flex-col">
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">Display Cadence</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-code-inline text-code-inline text-tertiary font-semibold">120.0 FPS</span>
+<span class="text-[10px] text-tertiary font-label-mono">0 JANK</span>
+</div>
+</div>
+</div>
+<!-- Code Snippet Display -->
+<div class="p-4 bg-surface-container-lowest font-code-inline text-code-inline overflow-x-auto text-[12px] leading-relaxed">
+<div class="text-on-surface-variant/50">// Spatial acceleration &amp; zero-alloc matrix pass</div>
+<div class="text-on-surface"><span class="text-secondary">pub struct</span> <span class="text-primary-container">RenderPipeline</span>&lt;<span class="text-tertiary">'a</span>&gt; {</div>
+<div class="pl-4 text-on-surface-variant">gpu_device: <span class="text-primary">&amp;'a</span> wgpu::Device,</div>
+<div class="pl-4 text-on-surface-variant">spatial_tree: Arc&lt;RTree&lt;NodeInstance&gt;&gt;,</div>
+<div class="pl-4 text-on-surface-variant">frame_budget_ns: <span class="text-secondary">AtomicU64</span>,</div>
+<div class="text-on-surface">}</div>
+<div class="mt-2 text-on-surface"><span class="text-secondary">impl</span>&lt;<span class="text-tertiary">'a</span>&gt; <span class="text-primary-container">RenderPipeline</span>&lt;<span class="text-tertiary">'a</span>&gt; {</div>
+<div class="pl-4 text-on-surface"><span class="text-secondary">pub fn</span> <span class="text-tertiary">dispatch_batch</span>(&amp;<span class="text-secondary">mut self</span>) -&gt; Result&lt;<span class="text-secondary">()</span>, FrameError&gt; {</div>
+<div class="pl-8 text-on-surface-variant"><span class="text-on-surface-variant/60">// sub-16ms dispatch loop</span></div>
+<div class="pl-8 text-on-surface">self.stream_vertex_buffer(<span class="text-primary-container">0x00FF88</span>)?;</div>
+<div class="pl-8 text-on-surface"><span class="text-secondary">Ok</span>(())</div>
+<div class="pl-4 text-on-surface">}</div>
+<div class="text-on-surface">}</div>
+</div>
+<!-- Live Heartbeat Waveform SVG -->
+<div class="px-4 py-2.5 bg-surface-container-high flex items-center justify-between text-[11px] font-label-mono text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-tertiary font-bold">&gt;&gt;</span>
+<span>BUFFER STATUS: HYDRATED</span>
+</div>
+<div class="w-24 h-4 flex items-center">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 100 16">
+<path d="M0 8 L20 8 L30 2 L40 14 L50 4 L60 11 L70 8 L100 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 01: EDITORIAL PHILOSOPHY & CRAFT -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-surface-container-low/40">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Label Column -->
+<div class="lg:col-span-4 flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary-container font-label-mono text-label-mono tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>01 / PHILOSOPHY &amp; CRAFT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+          Software is tangible material.
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80 mt-2">
+          Engineering rigor directly compounds aesthetic quality. There is no distinction between how a system performs and how it feels.
+        </p>
+</div>
+<!-- Narrative & Tenets Column -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed text-lg">
+          Software at its best feels instantaneous and tangible. I don't treat engineering and design as separate disciplines; code is simply the material through which great interaction design is realized. Over the past 8 years, I've taken products from raw zero-to-one prototypes to infrastructure serving millions of daily requests without dropping a single frame.
+        </p>
+<!-- 3 Core Tenets Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm pt-4">
+<div class="p-5 bg-surface-container rounded-xl flex flex-col gap-3 shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Speed as a Feature</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Sub-50ms interaction budgets and perceptual zero-latency. When software responds faster than human thought, trust becomes automatic.
+            </p>
+</div>
+<div class="p-5 bg-surface-container rounded-xl flex flex-col gap-3 shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Architectural Honesty</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Clean, modular abstractions that scale gracefully. No excessive dependencies; structure state machines to withstand edge-case reality.
+            </p>
+</div>
+<div class="p-5 bg-surface-container rounded-xl flex flex-col gap-3 shadow-sm hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Obsessive Craft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Micro-interactions, physics-based spring curves, and typographic discipline. Respect for the craft down to the single pixel and frame.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: SELECTED WORK (CORE SHOWCASE) -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl" id="work">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Showcase Header with Filter Tabs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary-container font-label-mono text-label-mono tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>02 / SELECTED WORK</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+            Flagship Engineering &amp; Design Systems
+          </h2>
+</div>
+<!-- Filter Pills (Interactive feel) -->
+<div class="inline-flex items-center gap-1.5 p-1 bg-surface-container rounded-lg self-start" id="project-filters">
+<button class="filter-btn px-3 py-1.5 rounded font-label-mono text-label-mono uppercase text-[11px] bg-surface-container-highest text-primary-container font-medium" data-target="all">All Projects</button>
+<button class="filter-btn px-3 py-1.5 rounded font-label-mono text-label-mono uppercase text-[11px] text-on-surface-variant hover:text-on-surface" data-target="systems">Systems &amp; AI</button>
+<button class="filter-btn px-3 py-1.5 rounded font-label-mono text-label-mono uppercase text-[11px] text-on-surface-variant hover:text-on-surface" data-target="webgl">Creative WebGL</button>
+<button class="filter-btn px-3 py-1.5 rounded font-label-mono text-label-mono uppercase text-[11px] text-on-surface-variant hover:text-on-surface" data-target="tools">Developer Tools</button>
+</div>
+</div>
+<!-- Projects Grid (4 In-Depth Featured Showcases) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- PROJECT 1: AETHER AI -->
+<div class="project-card group flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all" data-category="systems">
+<!-- Mockup Visual Display Header -->
+<div class="relative h-64 w-full bg-surface-container-highest flex flex-col justify-between p-5 overflow-hidden">
+<!-- Background Node Graph Blueprint Graphic -->
+<div class="absolute inset-0 opacity-25">
+<svg class="w-full h-full" fill="none" viewbox="0 0 600 300">
+<circle cx="120" cy="90" r="32" stroke="#38BDF8" stroke-dasharray="3 3" stroke-width="1.5"></circle>
+<circle cx="340" cy="60" r="44" stroke="#56E5A9" stroke-width="1.5"></circle>
+<circle cx="480" cy="180" r="28" stroke="#ADC6FF" stroke-width="1.5"></circle>
+<circle cx="210" cy="220" r="36" stroke="#38BDF8" stroke-width="1.5"></circle>
+<path d="M140 100 L300 70 M360 80 L460 170 M235 200 L460 180 M135 115 L190 200" stroke="#87929A" stroke-linecap="round" stroke-width="1.2"></path>
+</svg>
+</div>
+<!-- Header Badge Strip -->
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-mono text-[11px] uppercase tracking-wider px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur rounded text-primary-container font-semibold">[01] CASE STUDY</span>
+<span class="font-label-mono text-[11px] px-2.5 py-1 bg-tertiary/10 text-tertiary rounded font-medium">400k MAU • ACQUIRED 2024</span>
+</div>
+<!-- Telemetry overlay badge -->
+<div class="relative z-10 self-start p-3 bg-surface-container-lowest/90 backdrop-blur-md rounded-lg max-w-xs shadow-lg">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-mono text-[11px] text-on-surface font-semibold">WebGPU R-Tree Rendering Pipeline</span>
+</div>
+<div class="flex items-center gap-3 mt-1.5 font-label-mono text-[10px] text-on-surface-variant">
+<span>100k Nodes @ 60 FPS</span>
+<span class="text-tertiary">+340% Throughput</span>
+</div>
+</div>
+</div>
+<!-- Project Content Body -->
+<div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                  AETHER AI — Generative Canvas &amp; Realtime Graph Engine
+                </h3>
+</div>
+<div class="flex items-center gap-3 font-label-mono text-label-mono text-on-surface-variant">
+<span>2024–2025</span>
+<span>•</span>
+<span>Founding Staff Engineer</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Architected the ground-up spatial rendering engine for an infinite multi-modal canvas. Migrated layout evaluation from CPU to a Rust-compiled WASM kernel with custom WebGPU shaders.
+              </p>
+</div>
+<div class="flex flex-col gap-4 pt-2">
+<!-- Tech tags -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">TypeScript</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">WebAssembly</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">Rust</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-primary">WebGPU</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">React 19</span>
+</div>
+<!-- Action button to trigger deep dive modal below -->
+<a class="inline-flex items-center gap-2 text-primary font-label-mono text-label-mono font-medium hover:underline self-start" href="#deep-dive">
+<span>Examine Architecture Deep-Dive</span>
+<span class="material-symbols-outlined text-[15px]">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- PROJECT 2: CHRONO -->
+<div class="project-card group flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all" data-category="systems">
+<!-- Mockup Visual Display Header -->
+<div class="relative h-64 w-full bg-surface-container-highest flex flex-col justify-between p-5 overflow-hidden">
+<!-- Sparkline visualization visual -->
+<div class="absolute inset-0 p-6 flex flex-col justify-end opacity-40">
+<svg class="w-full h-28 text-primary-container" fill="none" viewbox="0 0 500 120">
+<path d="M0 100 Q 60 40 120 70 T 240 20 T 360 80 T 480 15" fill="none" stroke="currentColor" stroke-width="2"></path>
+<path d="M0 100 Q 60 40 120 70 T 240 20 T 360 80 T 480 15 L480 120 L0 120 Z" fill="currentColor" fill-opacity="0.15"></path>
+</svg>
+</div>
+<!-- Header Badge Strip -->
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-mono text-[11px] uppercase tracking-wider px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur rounded text-primary-container font-semibold">[02] DISTRIBUTED SYSTEMS</span>
+<span class="font-label-mono text-[11px] px-2.5 py-1 bg-tertiary/10 text-tertiary rounded font-medium">2.4B EVENTS / DAY</span>
+</div>
+<!-- Flamegraph Telemetry Hud -->
+<div class="relative z-10 self-end p-3 bg-surface-container-lowest/90 backdrop-blur-md rounded-lg max-w-xs shadow-lg">
+<div class="flex items-center justify-between gap-4 font-label-mono text-[11px]">
+<span class="text-on-surface-variant">p99 Query Latency</span>
+<span class="text-tertiary font-bold">850ms → 24ms</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full w-[94%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Project Content Body -->
+<div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                CHRONO — High-Frequency Distributed Metrics Platform
+              </h3>
+<div class="flex items-center gap-3 font-label-mono text-label-mono text-on-surface-variant">
+<span>2024</span>
+<span>•</span>
+<span>Lead Systems Architect</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Replaced legacy pipeline with an eBPF sensor fleet streaming into ClickHouse sharded clusters. Delivered real-time observability telemetry across multi-cloud Kubernetes clusters with sub-second aggregate views.
+              </p>
+</div>
+<div class="flex flex-col gap-4 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">Go</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">ClickHouse</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">Apache Kafka</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">Next.js</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-primary">eBPF</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+<span>Deployed to 14 Global Regions</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT 3: SYNAPSE -->
+<div class="project-card group flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all" data-category="webgl">
+<!-- Mockup Visual Display Header -->
+<div class="relative h-64 w-full bg-surface-container-highest flex flex-col justify-between p-5 overflow-hidden">
+<!-- 3D Spatial Grid Wireframe Graphics -->
+<div class="absolute inset-0 flex items-center justify-center opacity-30">
+<svg class="w-72 h-72 text-secondary" fill="none" viewbox="0 0 200 200">
+<polygon points="100,20 180,60 180,140 100,180 20,140 20,60" stroke="currentColor" stroke-width="1.5"></polygon>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.2" x1="100" x2="100" y1="20" y2="180"></line>
+<line stroke="currentColor" stroke-width="1.2" x1="20" x2="180" y1="60" y2="140"></line>
+<line stroke="currentColor" stroke-width="1.2" x1="20" x2="180" y1="140" y2="60"></line>
+</svg>
+</div>
+<!-- Header Badge Strip -->
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-mono text-[11px] uppercase tracking-wider px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur rounded text-primary-container font-semibold">[03] 3D INTERACTION</span>
+<span class="font-label-mono text-[11px] px-2.5 py-1 bg-primary-container/10 text-primary-container rounded font-medium">PRODUCT HUNT #1 OF THE DAY</span>
+</div>
+<!-- Multi-user Cursor Collaboration pill -->
+<div class="relative z-10 self-start flex items-center gap-2 p-2.5 bg-surface-container-lowest/90 backdrop-blur rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-mono text-[10px] text-on-surface">CRDT Sync State: Synchronized (18 Peers)</span>
+</div>
+</div>
+<!-- Project Content Body -->
+<div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                SYNAPSE — Spatial Collaboration &amp; Design Runtime
+              </h3>
+<div class="flex items-center gap-3 font-label-mono text-label-mono text-on-surface-variant">
+<span>2023–2024</span>
+<span>•</span>
+<span>Principal Technologist</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Multiplayer 3D studio runtime enabling designers and engineers to collaboratively sculpt spatial component topologies. Built custom raymarching GLSL shaders and zero-latency delta reconciliation via Yjs CRDTs.
+              </p>
+</div>
+<div class="flex flex-col gap-4 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-primary">Three.js</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">WebGL 2.0</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">WebSockets</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">CRDTs (Yjs)</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">GLSL Shaders</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[15px] text-primary-container">layers</span>
+<span>Zero-allocation animation loop</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT 4: KINETIC -->
+<div class="project-card group flex flex-col bg-surface-container rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all" data-category="tools">
+<!-- Mockup Visual Display Header -->
+<div class="relative h-64 w-full bg-surface-container-highest flex flex-col justify-between p-5 overflow-hidden">
+<!-- Terminal CLI Benchmark Visual -->
+<div class="absolute inset-0 p-5 bg-surface-container-lowest/80 font-code-inline text-[11px] leading-relaxed flex flex-col justify-center">
+<div class="text-tertiary">$ kinetic build --target=all --optimize</div>
+<div class="text-on-surface-variant mt-1">&gt; parsed 4,820 figma variables in 1.14ms</div>
+<div class="text-on-surface-variant">&gt; compiled: CSS Variables, Tailwind v4, Swift, Kotlin</div>
+<div class="text-primary mt-1">&gt; Total output time: 1.89ms [100% Cache Hit]</div>
+</div>
+<!-- Header Badge Strip -->
+<div class="relative z-10 flex items-center justify-between">
+<span class="font-label-mono text-[11px] uppercase tracking-wider px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur rounded text-primary-container font-semibold">[04] OPEN SOURCE</span>
+<span class="font-label-mono text-[11px] px-2.5 py-1 bg-secondary/10 text-secondary rounded font-medium">12,000+ GITHUB STARS</span>
+</div>
+<!-- Adoption indicator -->
+<div class="relative z-10 self-end px-3 py-1.5 bg-surface-container-lowest/90 backdrop-blur rounded-lg font-label-mono text-[10px] text-on-surface">
+              ADOPTED BY FORTUNE 500 DESIGN SYSTEMS
+            </div>
+</div>
+<!-- Project Content Body -->
+<div class="p-6 flex flex-col gap-4 flex-1 justify-between">
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                KINETIC — Design Token Compiler &amp; Headless Runtime
+              </h3>
+<div class="flex items-center gap-3 font-label-mono text-label-mono text-on-surface-variant">
+<span>2023</span>
+<span>•</span>
+<span>Author &amp; Lead Maintainer</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Ultra-fast Rust compiler transforming multi-brand design tokens into framework-agnostic runtime primitives. Enables unified styling and dynamic runtime theme injection across web and native targets.
+              </p>
+</div>
+<div class="flex flex-col gap-4 pt-2">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-primary">Rust</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">CLI Architecture</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">PostCSS</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">Web Components</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-mono text-[11px] text-on-surface-variant">Figma REST API</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[15px] text-primary">star</span>
+<span>Featured on GitHub Trending worldwide</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: DEEP-DIVE ARCHITECTURAL SPEC (AETHER AI CASE STUDY MODAL/CONTAINER) -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-surface-container-low/60" id="deep-dive">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Container Title Bar -->
+<div class="p-6 lg:p-8 bg-surface-container rounded-2xl shadow-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 bg-surface-container-high/40 p-4 rounded-xl">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-label-mono text-[11px] text-primary uppercase">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>TECHNICAL ARCHITECTURE BREAKDOWN // CASE_01</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-semibold text-on-surface">
+              Engineering the Aether Real-Time Graph Kernel
+            </h3>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded bg-tertiary/10 text-tertiary font-label-mono text-[11px] font-medium">60 FPS Pinned</span>
+<span class="px-3 py-1 rounded bg-primary-container/10 text-primary-container font-label-mono text-[11px] font-medium">-70% Client Memory</span>
+</div>
+</div>
+<!-- 3-Column Engineering Deep-Dive -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-5 bg-surface-container-lowest rounded-xl flex flex-col gap-3">
+<span class="font-label-mono text-label-mono text-error uppercase text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span>
+<span>The Challenge</span>
+</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Canvas Layout Thrashing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Standard 2D Canvas contexts collapsed under 10,000+ interactive nodes with dynamic connected edges. DOM garbage collection pauses introduced visible stutter (&gt;120ms frame drops) during pinch-to-zoom gestures on Retina viewports.
+            </p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-xl flex flex-col gap-3">
+<span class="font-label-mono text-label-mono text-primary-container uppercase text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">architecture</span>
+<span>Architectural Approach</span>
+</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">WASM + Spatial Indexing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Implemented a zero-allocation R-Tree spatial index written in Rust. Nodes outside the current camera frustum are pruned before any draw call. Instanced vertex arrays upload viewport coordinates directly to GPU memory via WebGPU buffers.
+            </p>
+</div>
+<div class="p-5 bg-surface-container-lowest rounded-xl flex flex-col gap-3">
+<span class="font-label-mono text-label-mono text-tertiary uppercase text-[11px] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Measurable Impact</span>
+</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Zero-Drop Execution</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Achieved steady 60 FPS pinned even on low-power mobile devices with over 100,000 live active graph connections. Memory footprint plummeted from 160MB down to 18MB heap usage under heavy multi-touch gestures.
+            </p>
+</div>
+</div>
+<!-- Interactive Architecture Flow Diagram Mockup -->
+<div class="p-6 bg-surface-container-lowest rounded-xl flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-on-surface-variant uppercase">Data Flow Topology: Input to Render Buffer</span>
+<span class="font-label-mono text-[10px] text-tertiary">LATENCY: 1.2ms END-TO-END</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-center">
+<div class="p-3 bg-surface-container-high rounded-lg flex flex-col items-center">
+<span class="font-label-mono text-[10px] text-on-surface-variant">STEP 01</span>
+<span class="font-code-inline text-code-inline text-on-surface font-semibold mt-1">PointerEvent</span>
+<span class="text-[10px] text-on-surface-variant/70 mt-1">Raw Touch / Pen</span>
+</div>
+<div class="p-3 bg-surface-container-high rounded-lg flex flex-col items-center">
+<span class="font-label-mono text-[10px] text-primary">STEP 02</span>
+<span class="font-code-inline text-code-inline text-primary font-semibold mt-1">WASM R-Tree</span>
+<span class="text-[10px] text-on-surface-variant/70 mt-1">Frustum Culling</span>
+</div>
+<div class="p-3 bg-surface-container-high rounded-lg flex flex-col items-center">
+<span class="font-label-mono text-[10px] text-tertiary">STEP 03</span>
+<span class="font-code-inline text-code-inline text-tertiary font-semibold mt-1">GPU Buffer Map</span>
+<span class="text-[10px] text-on-surface-variant/70 mt-1">Zero-copy Ring Buffer</span>
+</div>
+<div class="p-3 bg-surface-container-high rounded-lg flex flex-col items-center">
+<span class="font-label-mono text-[10px] text-secondary">STEP 04</span>
+<span class="font-code-inline text-code-inline text-secondary font-semibold mt-1">WebGPU Pass</span>
+<span class="text-[10px] text-on-surface-variant/70 mt-1">120 FPS Output</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: ARCHITECTURAL CAPABILITIES & MATRIX -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl" id="architecture">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary-container font-label-mono text-label-mono tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>CAPABILITIES // ARCHITECTURAL STACK</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+          Engineered for Extreme Scalability &amp; Precision
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          A structured competency matrix spanning low-level systems programming to high-craft human-computer interaction.
+        </p>
+</div>
+<!-- Structured Competency Matrix (5 Pillars) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Frontend Architecture -->
+<div class="p-6 bg-surface-container rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-primary uppercase tracking-wider font-semibold">[01] UI ARCHITECTURE</span>
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Frontend Systems</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero-runtime styling engines, complex hierarchical state machines, concurrent rendering loops, and strict type soundness.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">React 19</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Next.js App Router</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-primary">TypeScript</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Tailwind CSS</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">XState</span>
+</div>
+</div>
+<!-- Backend & Distributed Systems -->
+<div class="p-6 bg-surface-container rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-tertiary uppercase tracking-wider font-semibold">[02] INFRASTRUCTURE</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">dns</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Distributed Systems</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-concurrency microservices, event streaming architecture, low-overhead binary RPC protocols, and zero-allocation pipelines.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-tertiary">Go</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-tertiary">Rust</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Apache Kafka</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">gRPC / Protobuf</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Redis</span>
+</div>
+</div>
+<!-- Data & Edge Infrastructure -->
+<div class="p-6 bg-surface-container rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-secondary uppercase tracking-wider font-semibold">[03] PERSISTENCE &amp; CLOUD</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">database</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Data &amp; Edge Clouds</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            OLAP analytics engines handling billions of rows, partitioned relational models, edge serverless isolates, and reproducible declarative IaC.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-secondary">ClickHouse</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">PostgreSQL</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Cloudflare Workers</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Kubernetes</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">AWS CDK</span>
+</div>
+</div>
+<!-- AI Engineering & Tooling -->
+<div class="p-6 bg-surface-container rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-primary-container uppercase tracking-wider font-semibold">[04] AI RUNTIME</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">AI Systems &amp; Tooling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Client-side ONNX runtime quantization, vector embedding search pipelines, agent tool-calling protocols, and streaming token parsers.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-primary-container">ONNX Runtime</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Vector Embeddings</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">LLM Streaming</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">PyTorch</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Python</span>
+</div>
+</div>
+<!-- Interaction & Design System Engineering -->
+<div class="p-6 bg-surface-container rounded-2xl flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-2">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-tertiary uppercase tracking-wider font-semibold">[05] INTERACTION CRAFT</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">gesture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Interaction Engineering &amp; Design Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Full-stack design systems with headless components, WCAG AAA accessibility, custom tactile spring physics, GLSL post-processing shaders, and token synchronization bridges from Figma directly to production codebases.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-tertiary">Figma API</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-tertiary">WebGL / Three.js</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Design Tokens</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">Motion Spring Curves</span>
+<span class="px-2 py-1 bg-surface-container-highest rounded font-code-inline text-[11px] text-on-surface">WCAG AAA Compliance</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: CAREER TRAJECTORY & IMPACT TIMELINE -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-surface-container-low/40">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary-container font-label-mono text-label-mono tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>03 / EXPERIENCE &amp; TRAJECTORY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+          Track Record of Compounding Technical Impact
+        </h2>
+</div>
+<!-- Chronological Timeline with Outcome Metrics -->
+<div class="flex flex-col gap-space-sm">
+<!-- Role 1 -->
+<div class="p-6 bg-surface-container rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-1 lg:max-w-md">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Staff Creative Technologist</span>
+<span class="font-label-mono text-[11px] px-2 py-0.5 rounded bg-primary-container/10 text-primary-container font-medium">CURRENT</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary font-medium">Veloce Labs</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Spearheaded the custom WebGPU hardware-accelerated design platform. Mentored and scaled an engineering cohort of 14 across frontend and graphics infra.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">2023 — PRESENT</span>
+<span class="font-label-mono text-[11px] text-tertiary">Zero-regression release record</span>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="p-6 bg-surface-container rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-1 lg:max-w-md">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Senior Frontend Systems Engineer</span>
+<span class="font-label-mono text-label-mono text-primary font-medium">HyperGraph</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Re-architected core dashboard for 120,000 enterprise users. Reduced Time-to-Interactive (TTI) by 62% and eliminated hydration overhead with streaming SSR.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">2021 — 2023</span>
+<span class="font-label-mono text-[11px] text-tertiary">TTI reduced from 3.8s to 1.4s</span>
+</div>
+</div>
+<!-- Role 3 -->
+<div class="p-6 bg-surface-container rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-1 lg:max-w-md">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Creative Technologist &amp; Product Designer</span>
+<span class="font-label-mono text-label-mono text-primary font-medium">Studio Modus</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Engineered bespoke award-winning digital experiences and custom 3D web configurators for clients including Stripe, Figma, and Rivian.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">2019 — 2021</span>
+<span class="font-label-mono text-[11px] text-primary-container">3x Awwwards Site of the Year Nominee</span>
+</div>
+</div>
+<!-- Role 4 -->
+<div class="p-6 bg-surface-container rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex flex-col gap-1 lg:max-w-md">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Software Engineer</span>
+<span class="font-label-mono text-label-mono text-primary font-medium">Nucleus Cloud</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Core contributor to distributed query optimization routines and high-throughput logging collectors.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-1">
+<span class="font-label-mono text-label-mono text-on-surface-variant font-semibold">2017 — 2019</span>
+<span class="font-label-mono text-[11px] text-on-surface-variant">Authored 4 RFC specifications</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06: BEHIND THE TERMINAL & AUTHENTIC VOICE (WITH PORTRAIT https://lh3.googleusercontent.com/aida-public/AB6AXuDwU-qZO_I-VLBwFxGr57S5vGoCVZnQ2sm2g7HwTUBlGi5HhefWMOUYTUNp9BYJBkIVRM3ficAlKAK50Q-XEIbuPXtVck8RovAJnUka2sp-PYKUdhOhv-awQAoem7qmDwv8Ae_fR41rqMtFhJG4fy8taB-QDO8g8gFwqwmWr5yKaI5AVjPNz9XHON5yuBlvOgCsJ2aPEpYQ56yom9lI7Cn6T8_fhVC9we7a7tLktQsRQbpezQo0lu-ktQ) -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Portrait Image Container -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden bg-surface-container shadow-2xl">
+<!-- Required Portait Image Token -->
+<img alt="Moody cinematic studio portrait of Alex Rivera, creative technologist and software engineer" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwU-qZO_I-VLBwFxGr57S5vGoCVZnQ2sm2g7HwTUBlGi5HhefWMOUYTUNp9BYJBkIVRM3ficAlKAK50Q-XEIbuPXtVck8RovAJnUka2sp-PYKUdhOhv-awQAoem7qmDwv8Ae_fR41rqMtFhJG4fy8taB-QDO8g8gFwqwmWr5yKaI5AVjPNz9XHON5yuBlvOgCsJ2aPEpYQ56yom9lI7Cn6T8_fhVC9we7a7tLktQsRQbpezQo0lu-ktQ"/>
+<!-- Ambient gradient rim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-4 left-4 right-4 p-3 bg-surface-container-lowest/80 backdrop-blur rounded-lg flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-on-surface">ALEX RIVERA // SAN FRANCISCO, CA</span>
+<span class="font-label-mono text-[10px] text-tertiary">37.7749° N, 122.4194° W</span>
+</div>
+</div>
+</div>
+<!-- Narrative & Personal Principles -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-2 text-primary-container font-label-mono text-label-mono tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>04 / BEHIND THE TERMINAL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+          Curiosity across the mechanical and the digital.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          When I'm not profiling frame rates or architecting distributed pipelines, you'll find me exploring modular analog synthesizers, shooting 35mm monochrome photography in Tokyo and San Francisco, and reading speculative architecture fiction.
+        </p>
+<!-- Engineering Principles Cards -->
+<div class="flex flex-col gap-3 pt-2">
+<div class="p-4 bg-surface-container rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">terminal</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">“Simplicity is hard work, not laziness.”</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">The cleanest APIs require the deepest conceptual iteration.</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5">favorite</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">“Build for humans with emotions, not just machines with compute.”</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Software creates an emotional resonance through its tactility and speed.</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">share</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">“Default to open source and shared knowledge.”</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Progress accelerates exponentially when we document the difficult lessons publicly.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 07: PROOF, METRICS & TESTIMONIAL -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl bg-surface-container-low/40">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- 4-Column Proof Metric Cards -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<div class="p-6 bg-surface-container rounded-xl flex flex-col gap-1 shadow-sm">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[11px]">Open Source</span>
+<span class="font-display text-headline-lg lg:text-display font-semibold text-primary">12k+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Stars across repos</span>
+</div>
+<div class="p-6 bg-surface-container rounded-xl flex flex-col gap-1 shadow-sm">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[11px]">Engineering</span>
+<span class="font-display text-headline-lg lg:text-display font-semibold text-on-surface">8+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Years shipping production code</span>
+</div>
+<div class="p-6 bg-surface-container rounded-xl flex flex-col gap-1 shadow-sm">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[11px]">Scale</span>
+<span class="font-display text-headline-lg lg:text-display font-semibold text-tertiary">400k+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active monthly users</span>
+</div>
+<div class="p-6 bg-surface-container rounded-xl flex flex-col gap-1 shadow-sm">
+<span class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[11px]">Reliability</span>
+<span class="font-display text-headline-lg lg:text-display font-semibold text-secondary">99.98%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Average uptime SLA</span>
+</div>
+</div>
+<!-- Quote Testimonial Card -->
+<div class="p-8 lg:p-12 bg-surface-container rounded-2xl relative overflow-hidden shadow-lg">
+<div class="relative z-10 flex flex-col gap-6 max-w-4xl">
+<span class="material-symbols-outlined text-primary-container text-4xl">format_quote</span>
+<p class="font-headline-md text-headline-md text-on-surface font-medium leading-relaxed">
+            “Alex possesses that rare, 1% intersection of obsessive aesthetic taste and deep low-level systems engineering capability. They don't just build features; they elevate the craft of the entire engineering organization.”
+          </p>
+<div class="flex items-center gap-4 pt-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center font-label-mono font-bold text-primary">ER</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Elena Rostova</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">VP of Product Engineering</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 08: BOLD FINAL CONTACT & CTA -->
+<section class="w-full px-gutter-mobile lg:px-margin py-space-xl">
+<div class="max-w-7xl mx-auto p-8 lg:p-16 bg-surface-container rounded-2xl shadow-2xl relative overflow-hidden">
+<!-- Background subtle accent ring -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/10 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-tertiary font-label-mono text-label-mono tracking-wider">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>NEXT TRANSMISSION</span>
+</div>
+<h2 class="font-display text-headline-lg lg:text-display font-semibold text-on-surface tracking-tight leading-[1.05]">
+            Have an ambitious product worth building?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Currently exploring select staff engineering roles, founding technical leadership, and strategic product advisory for 2025.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-4">
+<!-- Copy Email Action -->
+<div class="p-4 bg-surface-container-lowest rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">Direct Inquiries</span>
+<span class="font-code-inline text-code-inline text-on-surface font-semibold select-all">alex@rivera.design</span>
+</div>
+<button class="p-2 rounded hover:bg-surface-container text-primary transition-colors" id="copy-email-btn" title="Copy Email">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Schedule Call CTA Button -->
+<a class="w-full py-3.5 px-6 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-mono text-label-mono font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md" href="#">
+<span>Schedule Intro Conversation</span>
+<span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<!-- PGP / Security Spec & Micro Link -->
+<div class="flex items-center justify-between px-2 font-label-mono text-[11px] text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">key</span>
+<span>PGP: 0x9B4E281F</span>
+</a>
+<span class="text-tertiary">Response time: &lt;24 hrs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple filter tab interactivity for Selected Work
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Active button styles
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-surface-container-highest', 'text-primary-container', 'font-medium');
+          btn.classList.add('text-on-surface-variant');
+        });
+        button.classList.add('bg-surface-container-highest', 'text-primary-container', 'font-medium');
+        button.classList.remove('text-on-surface-variant');
+
+        const target = button.getAttribute('data-target');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (target === 'all' || category === target) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Email copy button feedback
+    const copyBtn = document.getElementById('copy-email-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('alex@rivera.design').then(() => {
+          const icon = copyBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = 'check';
+            setTimeout(() => {
+              icon.textContent = 'content_copy';
+            }, 2000);
+          }
+        });
+      });
+    }
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 py-space-xl"><div class="max-w-7xl mx-auto px-gutter-mobile lg:px-margin flex flex-col gap-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg border-b border-outline-variant/20 pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-xs"><div class="font-headline-sm text-headline-sm font-semibold text-on-surface">Alex Rivera</div><p class="font-body-sm text-body-sm text-on-surface-variant">Staff Creative Technologist &amp; Systems Architect. Engineering architectural software, high-concurrency interaction mechanics, and computational design interfaces.</p></div><div class="md:col-span-3 flex flex-col gap-space-xs"><span class="font-label-mono text-label-mono uppercase text-on-surface-variant/70">Node Location</span><div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm"><span class="material-symbols-outlined text-tertiary text-sm">schedule</span><span>San Francisco, CA (PST)</span></div></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-label-mono text-label-mono uppercase text-on-surface-variant/70">Transmissions &amp; Network</span><div class="flex flex-wrap gap-x-space-md gap-y-space-xs font-label-mono text-label-mono text-on-surface-variant"><a class="hover:text-primary transition-colors" href="#">GitHub</a><a class="hover:text-primary transition-colors" href="#">Read.cv</a><a class="hover:text-primary transition-colors" href="#">LinkedIn</a><a class="hover:text-primary transition-colors" href="#">X / Twitter</a><a class="hover:text-primary transition-colors" href="#">Email</a></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-mono text-label-mono text-on-surface-variant/60 text-[11px]"><div>© 2025 Alex Rivera. Precision systems &amp; interaction models.</div><div>Built with precision &amp; high-fidelity craft</div></div></div></footer></body></html>
