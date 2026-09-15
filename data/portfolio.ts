@@ -8,9 +8,9 @@ export const portfolio = {
   availability: "Open to Freelance & Internship",
 
   hero: {
-    headline: "I build full-stack products that solve real problems.",
+    headline: "I build web, mobile, and AI-powered applications.",
     description:
-      "Full Stack Developer focused on modern web technologies, Mobile Apps, AI-powered applications, and building practical digital solutions.",
+      "Software Developer who enjoys building web applications, mobile apps, backend systems, and AI-based solutions.",
   },
 
   socials: {
@@ -24,28 +24,20 @@ export const portfolio = {
   },
 
   about: {
-    heading: "Building practical software with code, curiosity, and impact.",
-    bio: "I am a Full Stack Developer with a strong foundation in programming, databases, and computer systems. I enjoy building practical applications across web development, AI, and software engineering, with a focus on turning ideas into useful real-world solutions.",
+    heading: "I enjoy turning ideas into working software.",
+    bio: "I’m a Software Developer who enjoys building things from the ground up. I’ve worked on web applications, Android apps, backend systems, and AI-based projects. I like understanding how things work, solving problems through code, and turning an idea into something people can actually use.",
   },
 
   skills: {
     languages: ["C", "C++", "Java", "Python"],
-
     frontend: ["HTML", "CSS", "JavaScript"],
-
-    backend: ["Node.js", "PHP", "FastAPI"],
-
+    backend: ["Springboot", "FastAPI"],
     database: ["MongoDB", "MySQL", "Firebase"],
-
     ai: ["Machine Learning"],
-
     hardware: ["IOT", "YOLOv8"],
-
     mobile: ["Android Development"],
-
     tools: ["Git", "GitHub", "Postman", "CodeRabbit", "AWS"],
-
-    frameworks: ["MERN Stack", "Next.js"],
+    frameworks: ["Next.js", "Node.js"],
   },
 
   projects: [
@@ -54,7 +46,7 @@ export const portfolio = {
       title: "AgriTech",
       subtitle: "Smart Agriculture Support Platform",
       description:
-        "A full-stack platform supporting farmers with labour hiring, AI-based crop guidance, and role-based access for farmers, labourers, experts, and administrators.",
+        "Built a web platform that brings together farmer support, labour management, crop guidance, disease detection, and role-based access in one place.",
       role: "Full Stack Developer",
       period: "Jul 2024 – Dec 2024",
       technologies: [
@@ -75,12 +67,12 @@ export const portfolio = {
       featured: true,
       caseStudy: {
         overview:
-          "A smart agriculture platform designed to support different stakeholders involved in farming.",
+          "AgriTech is a platform built to help farmers and other users manage different farming-related activities from one place.",
         responsibilities: [
-          "Developed the full-stack web application.",
-          "Integrated AI-based crop guidance.",
-          "Implemented role-based access.",
-          "Worked with JWT authentication.",
+          "Built the full-stack web application.",
+          "Worked on farmer and labour management features.",
+          "Integrated AI-based crop guidance and disease detection.",
+          "Implemented role-based access and JWT authentication.",
         ],
         outcome:
           "Created a unified platform connecting farmers, labourers, experts, and administrators.",
@@ -89,10 +81,10 @@ export const portfolio = {
 
     {
       id: "box-detection",
-      title: "Box Detection System using Computer Vision",
-      subtitle: "AI-powered computer vision application",
+      title: "Box Detection System",
+      subtitle: "Computer Vision & Object Detection System",
       description:
-        "An AI-powered web application for real-time box detection from images and video streams using computer vision techniques.",
+        "Built a computer vision application to detect boxes from images and video streams using YOLOv8, with a FastAPI backend.",
       role: "AI / Backend Developer",
       period: "Nov 2025 – Feb 2026",
       technologies: [
@@ -112,11 +104,12 @@ export const portfolio = {
       featured: true,
       caseStudy: {
         overview:
-          "A computer vision application designed for real-time box detection from images and video streams.",
+          "Built a computer vision application for detecting boxes from images and video streams. The project combines a YOLOv8 detection model with a web interface and backend APIs.",
         responsibilities: [
-          "Integrated the YOLOv8 object detection model.",
+          "Integrated YOLOv8 for box detection.",
           "Developed backend APIs using FastAPI.",
           "Worked on data management and authentication.",
+          "Connected the detection workflow with the web application.",
         ],
         outcome:
           "Built an AI-powered application combining computer vision with a modern web interface.",

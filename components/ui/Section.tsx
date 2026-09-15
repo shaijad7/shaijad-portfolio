@@ -14,7 +14,7 @@ const Section = React.forwardRef<
     transition={{ duration: 0.6, ease: "easeOut" }}
     ref={ref as React.Ref<HTMLElement>}
     className={cn(
-      "w-full px-6 py-16 md:px-12 md:py-24 max-w-7xl mx-auto flex flex-col gap-12",
+      "w-full px-6 py-16 md:px-12 md:py-24 max-w-7xl mx-auto flex flex-col gap-12 scroll-mt-24",
       className
     )}
     {...props}

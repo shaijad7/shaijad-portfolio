@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function About() {
   return (
-    <Section id="about" className="border-t border-outline-variant py-24">
+    <Section id="about" className="border-t border-outline-variant py-20 md:py-24">
       <div className="flex flex-col-reverse md:flex-row gap-16 md:gap-24 items-center md:items-start">
         <div className="md:w-3/5 flex flex-col gap-8">
           <div className="flex flex-col gap-3">

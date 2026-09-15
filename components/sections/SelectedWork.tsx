@@ -14,11 +14,11 @@ export function SelectedWork() {
   };
 
   return (
-    <Section id="work" className="bg-surface-container-low border-y border-outline-variant py-24 md:py-32">
-      <div className="flex flex-col gap-4 mb-16 md:mb-20">
-        <h2 className="font-geist text-4xl md:text-5xl font-bold text-on-surface">Selected Work</h2>
+    <Section id="work" className="bg-surface-container-low border-y border-outline-variant py-20 md:py-24">
+      <div className="flex flex-col gap-4 mb-12 md:mb-16">
+        <h2 className="font-geist text-4xl md:text-5xl font-bold text-on-surface">Featured Projects</h2>
         <p className="text-on-surface-variant font-mono text-lg max-w-2xl">
-          A selection of recent projects and technical case studies.
+          A few projects I’ve built while learning and working with different technologies.
         </p>
       </div>
 
@@ -39,7 +39,7 @@ export function SelectedWork() {
                       src={project.image} 
                       alt={project.title}
                       fill
-                      className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:opacity-90"
+                      className="object-contain transition-all duration-700 group-hover:scale-105 group-hover:opacity-90"
                     />
                   ) : (
                     <div className="w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(128,128,128,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:20px_20px] transition-transform duration-700 group-hover:scale-105 group-hover:opacity-80" />
@@ -135,7 +135,7 @@ export function SelectedWork() {
                               src={img} 
                               alt={`${project.title} screenshot ${i + 1}`}
                               fill
-                              className="object-cover transition-transform duration-700 group-hover/img:scale-105"
+                              className="object-contain transition-transform duration-700 group-hover/img:scale-105"
                             />
                             <div className="absolute inset-0 ring-1 ring-inset ring-black/10 dark:ring-white/10 rounded-2xl pointer-events-none" />
                           </div>
