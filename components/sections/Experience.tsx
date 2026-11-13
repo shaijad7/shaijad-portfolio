@@ -7,12 +7,12 @@ import { motion } from "framer-motion"
 
 export function Experience() {
   return (
-    <Section id="experience" className="border-b border-outline-variant/30 py-20 md:py-24">
-      <div className="flex flex-col gap-4 mb-12 md:mb-16">
+    <Section id="experience" className="border-b border-outline-variant/30 py-12 md:py-16 lg:py-20">
+      <div className="flex flex-col gap-3">
         <h2 className="font-geist text-4xl md:text-5xl font-bold text-on-surface">Experience</h2>
       </div>
 
-      <div className="flex flex-col gap-12 md:gap-16 relative">
+      <div className="flex flex-col gap-10 md:gap-14 relative">
         {/* Vertical timeline line for desktop */}
         <div className="hidden md:block absolute left-1/4 top-0 bottom-0 w-px bg-outline-variant/30" />
         

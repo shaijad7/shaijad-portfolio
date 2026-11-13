@@ -14,7 +14,7 @@ export function Contact() {
       value: portfolio.socials.email,
       href: `mailto:${portfolio.socials.email}`,
       icon: Mail,
-      isExternal: false
+      isExternal: false,
     },
     {
       id: "github",
@@ -22,7 +22,7 @@ export function Contact() {
       value: portfolio.socials.github.replace("https://", ""),
       href: portfolio.socials.github,
       icon: Code2,
-      isExternal: true
+      isExternal: true,
     },
     {
       id: "location",
@@ -30,7 +30,7 @@ export function Contact() {
       value: portfolio.location,
       href: null,
       icon: MapPin,
-      isExternal: false
+      isExternal: false,
     },
     {
       id: "resume",
@@ -38,17 +38,19 @@ export function Contact() {
       value: "Shaijad-Shaikh-Resume.pdf",
       href: portfolio.socials.resume,
       icon: FileText,
-      isExternal: true
-    }
+      isExternal: true,
+    },
   ];
 
   return (
-    <Section id="contact" className="py-20 md:py-24 relative border-t border-outline-variant/50">
-      <div className="flex flex-col items-center text-center gap-4 mb-16">
-        <p className="text-primary font-mono text-sm tracking-widest uppercase">GET IN TOUCH</p>
-        <h2 className="font-geist text-4xl md:text-5xl font-bold text-on-surface">Have a project in mind? Let&apos;s talk.</h2>
-        <p className="text-on-surface-variant text-lg max-w-2xl mt-2 leading-relaxed">
-          I&apos;m open to freelance opportunities, internships, and interesting software projects.
+    <Section id="contact" className="py-12 md:py-16 lg:py-20 relative border-t border-outline-variant/50">
+      <div className="flex flex-col items-center text-center gap-3">
+        <p className="text-primary font-mono text-sm tracking-widest uppercase">Get in Touch</p>
+        <h2 className="font-geist text-4xl md:text-5xl font-bold text-on-surface">
+          {portfolio.contact.heading}
+        </h2>
+        <p className="text-on-surface-variant text-base sm:text-lg max-w-2xl leading-relaxed">
+          {portfolio.contact.description}
         </p>
       </div>
 
@@ -74,7 +76,8 @@ export function Contact() {
               </>
             );
 
-            const cardClasses = "flex items-center justify-between p-5 md:p-6 rounded-2xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface hover:border-blue-500/30 transition-all duration-300 group";
+            const cardClasses =
+              "flex items-center justify-between p-5 md:p-6 rounded-2xl bg-surface-container-low border border-outline-variant/30 hover:bg-surface hover:border-blue-500/30 transition-all duration-300 group";
 
             return (
               <motion.div
@@ -85,8 +88,8 @@ export function Contact() {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 {item.href ? (
-                  <a 
-                    href={item.href} 
+                  <a
+                    href={item.href}
                     target={item.isExternal ? "_blank" : undefined}
                     rel={item.isExternal ? "noopener noreferrer" : undefined}
                     className={cardClasses}
@@ -94,23 +97,21 @@ export function Contact() {
                     {Content}
                   </a>
                 ) : (
-                  <div className={cardClasses}>
-                    {Content}
-                  </div>
+                  <div className={cardClasses}>{Content}</div>
                 )}
               </motion.div>
-            )
+            );
           })}
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.4, delay: 0.4 }}
           className="mt-16 flex justify-center"
         >
-          <a 
+          <a
             href={`mailto:${portfolio.socials.email}`}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-on-primary font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 hover:shadow-primary/30"
           >
@@ -119,5 +120,5 @@ export function Contact() {
         </motion.div>
       </div>
     </Section>
-  )
+  );
 }

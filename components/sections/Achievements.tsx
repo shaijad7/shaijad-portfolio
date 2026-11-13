@@ -14,18 +14,18 @@ export function Achievements() {
   if (!hasAchievements && !hasCertifications && !hasActivities) return null;
 
   return (
-    <Section id="achievements" className="py-20 md:py-24 relative">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
-        <div className="flex flex-col gap-3">
+    <Section id="achievements" className="py-12 md:py-16 lg:py-20 relative">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col gap-2">
           <h2 className="font-geist text-4xl md:text-5xl font-bold text-on-surface">Recognition & Activities</h2>
-          <p className="text-on-surface-variant text-lg mt-1">Milestones, certifications, and activities beyond academics.</p>
+          <p className="text-on-surface-variant text-base sm:text-lg">Milestones, certifications, and activities beyond academics.</p>
         </div>
         <div className="hidden md:block text-right max-w-sm">
           <p className="text-on-surface-variant text-sm leading-relaxed">
             Learning. Participating. Contributing.<br />
             Always moving forward.
           </p>
-          <div className="h-px w-12 bg-outline-variant/50 ml-auto mt-4" />
+          <div className="h-px w-12 bg-outline-variant/50 ml-auto mt-3" />
         </div>
       </div>
 

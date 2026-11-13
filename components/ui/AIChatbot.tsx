@@ -50,10 +50,10 @@ export default function AIChatbot() {
 
   const suggestedQuestions = [
     "Who is Shaijad?",
+    "Tell me about QLix",
     "His projects",
-    "AgriTech",
-    "Main skills",
-    "Internships?",
+    "Android skills",
+    "Internship experience",
     "Contact info",
   ];
 

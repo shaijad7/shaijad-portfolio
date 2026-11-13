@@ -17,7 +17,7 @@ export default function Home() {
       <About />
       {portfolio.projects.length > 0 && <SelectedWork />}
       {portfolio.experience.length > 0 && <Experience />}
-      {(portfolio.skills.frontend.length > 0 || portfolio.skills.backend.length > 0) && <Skills />}
+      {(portfolio.skills.android.length > 0 || portfolio.skills.backend.length > 0) && <Skills />}
       {((portfolio.achievements?.length || 0) > 0 || (portfolio.certifications?.length || 0) > 0 || (portfolio.activities?.length || 0) > 0) && <Achievements />}
       <Contact />
       <Footer />

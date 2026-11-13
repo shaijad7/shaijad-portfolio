@@ -1,7 +1,7 @@
 export const portfolio = {
   name: "Shaijad Shaikh",
 
-  role: "Full Stack Developer",
+  role: "Software Developer",
 
   location: "Nashik, India",
 
@@ -10,7 +10,8 @@ export const portfolio = {
   hero: {
     headline: "I build web, mobile, and AI-powered applications.",
     description:
-      "Software Developer who enjoys building web applications, mobile apps, backend systems, and AI-based solutions.",
+      "Android Developer who enjoys building web applications, mobile apps, backend systems, and AI-based solutions.",
+    focusLabel: "ANDROID DEVELOPER",
   },
 
   socials: {
@@ -25,22 +26,60 @@ export const portfolio = {
 
   about: {
     heading: "I enjoy turning ideas into working software.",
-    bio: "I’m a Software Developer who enjoys building things from the ground up. I’ve worked on web applications, Android apps, backend systems, and AI-based projects. I like understanding how things work, solving problems through code, and turning an idea into something people can actually use.",
+    bio: "I'm a Software Developer who enjoys building things from the ground up. I've worked on web applications, Android apps, backend systems, and AI-based projects. I like understanding how things work, solving problems through code, and turning an idea into something people can actually use.",
   },
 
   skills: {
-    languages: ["C", "C++", "Java", "Python"],
-    frontend: ["HTML", "CSS", "JavaScript"],
-    backend: ["Springboot", "FastAPI"],
-    database: ["MongoDB", "MySQL", "Firebase"],
-    ai: ["Machine Learning"],
-    hardware: ["IOT", "YOLOv8"],
-    mobile: ["Android Development"],
-    tools: ["Git", "GitHub", "Postman", "CodeRabbit", "AWS"],
-    frameworks: ["Next.js", "Node.js"],
+    android: ["Java", "Kotlin", "Jetpack Compose", "Android Studio", "SQLite"],
+    languages: ["C", "C++", "Java", "Kotlin", "Python", "JavaScript", "SQL"],
+    backend: ["Node.js", "Express.js", "Spring Boot", "FastAPI", "REST APIs", "Firebase", "JWT"],
+    database: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
+    webdev: ["HTML", "CSS", "JavaScript", "Next.js"],
+    ai: ["Machine Learning", "YOLOv8"],
+    tools: ["AWS", "Git", "GitHub", "Postman", "Jira", "Docker", "Vercel", "Render", "VS Code"],
   },
 
   projects: [
+    {
+      id: "qlix",
+      title: "QLix",
+      subtitle: "Real-Time Audience Engagement Platform",
+      description:
+        "Built a full-stack engagement platform for live polls, quizzes, and Q&A in meetings and classrooms. Implemented real-time voting and leaderboards using Socket.IO and unique session codes.",
+      role: "Full Stack Developer",
+      period: "Apr 2026",
+      category: "Android & Mobile",
+      technologies: [
+        "Kotlin",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "Socket.IO",
+        "Firebase",
+        "JWT",
+        "AWS",
+      ],
+      liveUrl: "",
+      githubUrl: "",
+      image: "/projects/qlix/qlix_dashboard.webp",
+      gallery: [],
+      featured: true,
+      caseStudy: {
+        overview:
+          "QLix is a real-time audience engagement platform for live polls, quizzes, and Q&A sessions in meetings and classrooms. The platform supports role-based workflows for hosts and participants.",
+        responsibilities: [
+          "Built a platform for live polls, quizzes and Q&A.",
+          "Implemented real-time voting and leaderboards using Socket.IO and unique session codes.",
+          "Designed role-based backend APIs for user, session and content management.",
+          "Added push notifications, attendance tracking and session history for host and participant workflows.",
+          "Deployed on AWS EC2 with Auto Scaling and an Elastic Load Balancer.",
+        ],
+        outcome:
+          "A real-time engagement platform with live polling, leaderboards, and session management for hosts and participants.",
+      },
+    },
+
     {
       id: "agritech",
       title: "AgriTech",
@@ -49,8 +88,12 @@ export const portfolio = {
         "Built a web platform that brings together farmer support, labour management, crop guidance, disease detection, and role-based access in one place.",
       role: "Full Stack Developer",
       period: "Jul 2024 – Dec 2024",
+      category: "Web Development",
       technologies: [
-        "MERN Stack",
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Node.js",
         "Gemini API",
         "OpenAI API",
         "JWT Authentication",
@@ -62,7 +105,7 @@ export const portfolio = {
         "/projects/agritech/Agritech_Dashboard_02.png",
         "/projects/agritech/Agritech_DiseaseDetection_05.png",
         "/projects/agritech/Agritech_FarmingAssistence_04.png",
-        "/projects/agritech/Agritech_Labour_03.png"
+        "/projects/agritech/Agritech_Labour_03.png",
       ],
       featured: true,
       caseStudy: {
@@ -87,6 +130,7 @@ export const portfolio = {
         "Built a computer vision application to detect boxes from images and video streams using YOLOv8, with a FastAPI backend.",
       role: "AI / Backend Developer",
       period: "Nov 2025 – Feb 2026",
+      category: "AI & Computer Vision",
       technologies: [
         "Python",
         "Next.js",
@@ -99,7 +143,7 @@ export const portfolio = {
       image: "/projects/box-detection/Box-Detection_MainPage_02.png",
       gallery: [
         "/projects/box-detection/Box-Detection_Login_01.png",
-        "/projects/box-detection/Box-Detection_Users_03.png"
+        "/projects/box-detection/Box-Detection_Users_03.png",
       ],
       featured: true,
       caseStudy: {
@@ -124,12 +168,13 @@ export const portfolio = {
         "A web-based village administration platform for managing citizen registrations, service requests, and grievance redressal.",
       role: "Backend Developer",
       period: "Jan 2023 – Mar 2023",
+      category: "Web Development",
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
       liveUrl: "",
       githubUrl: "",
       image: "/projects/e-grampanchayat/E-Grampanchayat_MainPage_02.png",
       gallery: [
-        "/projects/e-grampanchayat/E-Grampanchayat_Dashboard_01.png"
+        "/projects/e-grampanchayat/E-Grampanchayat_Dashboard_01.png",
       ],
       featured: true,
       caseStudy: {
@@ -166,9 +211,8 @@ export const portfolio = {
 
   education: [
     {
-      degree: "B.Tech in Information Technology",
-      institution:
-        "K.K. Wagh Institute of Engineering Education & Research",
+      degree: "B.E. Information Technology",
+      institution: "K.K. Wagh College of Engineering, Nashik",
       period: "2024 – 2027",
       result: "CGPA: 8.0",
     },
@@ -177,14 +221,14 @@ export const portfolio = {
       degree: "Diploma in Information Technology",
       institution: "Government Polytechnic College, Ambad",
       period: "2021 – 2024",
-      result: "89.88%",
+      result: "Percentage: 89.88%",
     },
 
     {
-      degree: "SSC Board",
-      institution: "SCP Highschool Murti, Jalna",
-      period: "2020",
-      result: "86.87%",
+      degree: "Secondary School Certificate (SSC)",
+      institution: "SCP Highschool, Jalna",
+      period: "2020 – 2021",
+      result: "Percentage: 86.87%",
     },
   ],
 
@@ -208,6 +252,13 @@ export const portfolio = {
       provider: "VJTech Academy",
       year: "2023",
       skills: ["Java"],
+    },
+
+    {
+      title: "Web Development",
+      provider: "Sumago Infotech Pvt. Ltd.",
+      year: "2023",
+      skills: ["Web Development"],
     },
   ],
 
@@ -262,9 +313,9 @@ export const portfolio = {
   ],
 
   contact: {
-    heading: "Have something worth building?",
+    heading: "Let's build something useful.",
     description:
-      "I'm open to freelance opportunities and internships. Let's build something useful.",
+      "I'm open to freelance opportunities, internships, and interesting software projects.",
     email: "shaijadshaikh8380@gmail.com",
     phone: "8380856313",
   },

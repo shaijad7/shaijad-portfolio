@@ -2,7 +2,7 @@ import { portfolio } from '@/data/portfolio';
 
 export type ChatIntent = 
   | 'greeting' | 'identity' | 'role' | 'location'
-  | 'projects' | 'agritech' | 'box-detection' | 'e-grampanchayat' 
+  | 'projects' | 'agritech' | 'box-detection' | 'e-grampanchayat' | 'qlix'
   | 'project-role' | 'project-stack' | 'project-description'
   | 'skills' | 'experience' | 'education' | 'certifications' 
   | 'achievements' | 'availability' | 'internship' | 'freelance' 
@@ -55,21 +55,24 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       detectedIntent = 'no-clarification';
       newContext.pendingClarificationIntent = undefined;
     }
-    // If it's not a clear yes/no, we fall through and process it as a normal query, ignoring the pending clarification.
     if (detectedIntent === context.pendingClarificationIntent || detectedIntent === 'no-clarification') {
       return generateResponse(detectedIntent, newContext);
     }
-    newContext.pendingClarificationIntent = undefined; // Clear it if they just asked something else
+    newContext.pendingClarificationIntent = undefined;
   }
 
   // ==========================================
   // 1. Explicit project name mentioned
   // ==========================================
-  if (has('agritech', 'agriculture', 'farmers')) {
+  if (has('qlix', 'qliz', 'quiz', 'polls', 'leaderboard', 'socket', 'realtime engagement', 'real time engagement', 'live poll')) {
+    detectedIntent = 'qlix';
+    newContext.lastProject = 'qlix';
+  }
+  else if (has('agritech', 'agriculture', 'farmers')) {
     detectedIntent = 'agritech';
     newContext.lastProject = 'agritech';
   }
-  else if (has('box detection', 'computer vision', 'box', 'detection')) {
+  else if (has('box detection', 'computer vision', 'yolov8', 'yolo')) {
     detectedIntent = 'box-detection';
     newContext.lastProject = 'box-detection';
   }
@@ -83,23 +86,13 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
   // ==========================================
   else if (newContext.lastProject && !isGlobalRole()) {
     if (has('stack', 'technologies', 'tech', 'built with', 'use', 'which technologies')) {
-      if (normalized.length < 15 && has('what tech', 'which tech', 'stack')) {
-        clarify('project-stack', `Do you mean the technologies used in ${newContext.lastProject === 'agritech' ? 'AgriTech' : newContext.lastProject === 'box-detection' ? 'Box Detection' : 'E-Grampanchayat'}?`);
-      } else {
-        detectedIntent = 'project-stack';
-      }
+      detectedIntent = 'project-stack';
     } else if (has('role', 'did he do', 'contribution', 'responsible for', 'what was his role', 'what he did in this')) {
-      if (has('what role', 'what did he do', 'his role')) {
-        clarify('project-role', `Do you mean Shaijad's role in ${newContext.lastProject === 'agritech' ? 'AgriTech' : newContext.lastProject === 'box-detection' ? 'Box Detection' : 'E-Grampanchayat'}?`);
-      } else {
-        detectedIntent = 'project-role';
-      }
+      detectedIntent = 'project-role';
     } else if (has('description', 'more about', 'tell me more', 'how does', 'problem', 'solve', 'work')) {
       detectedIntent = 'project-description';
-    } else {
-      if (has('this project', 'about it')) {
-        detectedIntent = 'project-description';
-      }
+    } else if (has('this project', 'about it')) {
+      detectedIntent = 'project-description';
     }
   }
 
@@ -132,25 +125,31 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       }
     }
     // ==========================================
-    // 5. Global Skills
+    // 5. Android / Mobile specifically
+    // ==========================================
+    else if (has('android', 'kotlin', 'mobile app', 'jetpack', 'compose')) {
+      detectedIntent = 'skills';
+    }
+    // ==========================================
+    // 6. Global Skills
     // ==========================================
     else if (has('skills', 'technologies', 'tech stack', 'code in', 'programming')) {
       detectedIntent = 'skills';
     }
     // ==========================================
-    // 6. Location
+    // 7. Location
     // ==========================================
     else if (has('where', 'live', 'lives', 'based', 'from', 'stay', 'location')) {
       if (exactMatch('where he live', 'where does he live', 'where shaijad live', 'where he stays', 'his location', 'location', 'where from')) {
         clarify('location', "Do you mean where Shaijad is based?");
       } else if (has('where is shaijad based', 'where is he based', 'where is shaijad from')) {
-        detectedIntent = 'location'; // High confidence
+        detectedIntent = 'location';
       } else {
         clarify('location', "Do you mean where Shaijad is based?");
       }
     }
     // ==========================================
-    // 7. Global Experience
+    // 8. Global Experience
     // ==========================================
     else if ((has('experience', 'work history', 'job', 'where he worked', 'previous work', 'what work experience') && !isGlobalRole()) || exactMatch('his internship')) {
       if (exactMatch('where he worked', 'his experience', 'what work experience', 'previous work', 'his internship')) {
@@ -160,7 +159,7 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       }
     }
     // ==========================================
-    // 8. Global Education
+    // 9. Global Education
     // ==========================================
     else if (has('education', 'study', 'college', 'degree', 'university', 'where he is studying', 'where shaijad studies')) {
       if (exactMatch('where he study', 'where does he study', 'where shaijad studies', 'his college', 'his university', 'where he is studying')) {
@@ -170,7 +169,7 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       }
     }
     // ==========================================
-    // 9. Global Achievements/Certifications
+    // 10. Global Achievements/Certifications
     // ==========================================
     else if (has('certifications', 'certificate')) {
       detectedIntent = 'certifications';
@@ -179,14 +178,10 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       detectedIntent = 'achievements';
     }
     // ==========================================
-    // 10. Global Identity/Role/Projects
+    // 11. Global Identity/Role/Projects
     // ==========================================
     else if (has('projects', 'built', 'work', 'portfolio', 'made', 'what he built', 'show his projects', 'what has he made')) {
-      if (exactMatch('his projects', 'what he built', 'show his projects', 'what has he made', 'his work')) {
-        detectedIntent = 'projects';
-      } else {
-        detectedIntent = 'projects';
-      }
+      detectedIntent = 'projects';
     }
     else if (has('who is shaijad', 'who is this', 'about shaijad', 'tell me about')) {
       detectedIntent = 'identity';
@@ -203,7 +198,7 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       }
     }
     // ==========================================
-    // 11. Extras (Resume/Github)
+    // 12. Extras (Resume/Github)
     // ==========================================
     else if (has('resume', 'cv')) {
       if (exactMatch('cv', 'cv?')) clarify('resume', "Do you mean download Shaijad's resume?");
@@ -214,7 +209,7 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
       else detectedIntent = 'github';
     }
     // ==========================================
-    // 12. Greeting/Help/Fallback
+    // 13. Greeting/Help/Fallback
     // ==========================================
     else if (normalized === 'hi' || normalized === 'hello' || normalized === 'hey' || has('greetings')) {
       detectedIntent = 'greeting';
@@ -233,7 +228,6 @@ export function processIntent(input: string, context: ChatContext): EngineRespon
     };
   }
 
-  // Clear clarification state if we confidently detected something else
   newContext.pendingClarificationIntent = undefined;
 
   return generateResponse(detectedIntent, newContext);
@@ -245,7 +239,7 @@ function generateResponse(intent: ChatIntent, context: ChatContext): EngineRespo
   switch (intent) {
     case 'no-clarification':
       responseText = "No problem. What would you like to know about Shaijad?";
-      intent = 'fallback'; // Map back to fallback for UI consistency
+      intent = 'fallback';
       break;
 
     case 'location':
@@ -254,17 +248,22 @@ function generateResponse(intent: ChatIntent, context: ChatContext): EngineRespo
 
     case 'greeting':
     case 'help':
-      responseText = "Hi! I'm Shaijad's AI assistant. I can help with his projects, skills, experience, education, availability, or contact details.";
+      responseText = "Hi! I'm Shaijad's assistant. I can help with his projects, skills, experience, education, availability, or contact details. Try asking about QLix or AgriTech!";
       break;
     
     case 'identity':
-      responseText = `${portfolio.name} is a ${portfolio.role} based in ${portfolio.location}. He builds modern web and AI-powered applications.`;
+      responseText = `${portfolio.name} is a ${portfolio.role} based in ${portfolio.location} with a strong focus on Android and mobile application development. He also builds web applications, backend systems, and AI-based solutions.`;
       break;
     
     case 'role':
-      responseText = `Shaijad is a ${portfolio.role}. ${portfolio.hero.description}`;
+      responseText = `Shaijad is a ${portfolio.role} focused on Android and application development. ${portfolio.hero.description}`;
       break;
-      
+
+    case 'qlix': {
+      const p = portfolio.projects.find(x => x.id === 'qlix');
+      responseText = `QLix is a ${p?.subtitle.toLowerCase()} — Shaijad's latest project.\n\nIt supports live polls, quizzes, Q&A, real-time leaderboards via Socket.IO, and was deployed on AWS EC2.\n\nStack: ${p?.technologies.join(' · ')}`;
+      break;
+    }
     case 'agritech': {
       const p = portfolio.projects.find(x => x.id === 'agritech');
       responseText = `${p?.title} is a ${p?.subtitle.toLowerCase()} for farmers, labourers, and experts.\n\nStack: ${p?.technologies.join(' · ')}`;
@@ -311,23 +310,23 @@ function generateResponse(intent: ChatIntent, context: ChatContext): EngineRespo
     }
 
     case 'projects':
-      responseText = `Shaijad has built several projects including:\n- AgriTech (Smart Agriculture)\n- Box Detection System (Computer Vision)\n- E-Grampanchayat (Village Admin)\n\nAsk me about a specific one!`;
+      responseText = `Shaijad has built several projects:\n- QLix (Real-Time Engagement Platform) — his latest\n- AgriTech (Smart Agriculture)\n- Box Detection System (Computer Vision)\n- E-Grampanchayat (Village Admin)\n\nAsk me about a specific one!`;
       break;
 
     case 'skills':
-      responseText = `Shaijad works with ${portfolio.skills.languages.join(', ')}, ${portfolio.skills.frontend.join(', ')}, ${portfolio.skills.backend.join(', ')}, and AI/ML technologies.`;
+      responseText = `Shaijad's primary focus is Android development (Java, Kotlin, Jetpack Compose). He also works with Node.js, Express.js, Spring Boot, FastAPI, MongoDB, PostgreSQL, and ML/AI tools like YOLOv8.`;
       break;
 
     case 'experience':
-      responseText = `Shaijad completed a Web & Android Development internship at Sumago Infotech in Nashik from Jun 2023 to Aug 2023.`;
+      responseText = `Shaijad completed a Web & Android Development internship at Sumago Infotech Pvt. Ltd. in Nashik (Jun 2023 – Aug 2023), where he developed Android and web applications.`;
       break;
 
     case 'education':
-      responseText = `Shaijad is pursuing his B.Tech in IT at K.K. Wagh Institute (2024–2027). He previously completed a Diploma in IT (89.88%).`;
+      responseText = `Shaijad is pursuing B.E. in Information Technology at K.K. Wagh College of Engineering, Nashik (2024–2027), with a CGPA of 8.0. He previously completed a Diploma in IT (89.88%) from Government Polytechnic College, Ambad.`;
       break;
 
     case 'certifications':
-      responseText = `Shaijad holds certifications in:\n- AI-Powered Fullstack Cohort (2026)\n- Android Development (2024)\n- Core & Advanced Java (2023)`;
+      responseText = `Shaijad holds certifications in:\n- AI-Powered Fullstack Cohort (2026)\n- Android Development · LearnMKCL (2024)\n- Core & Advanced Java · VJTech Academy (2023)\n- Web Development · Sumago Infotech (2023)`;
       break;
 
     case 'achievements':
@@ -337,7 +336,7 @@ function generateResponse(intent: ChatIntent, context: ChatContext): EngineRespo
     case 'availability':
     case 'internship':
     case 'freelance':
-      responseText = `Yes. Shaijad is currently open to internship and freelance opportunities.`;
+      responseText = `Yes. Shaijad is currently open to internship and freelance opportunities, especially in Android and application development.`;
       break;
 
     case 'contact':
@@ -355,7 +354,7 @@ function generateResponse(intent: ChatIntent, context: ChatContext): EngineRespo
     case 'fallback':
     case 'clarification':
     default:
-      responseText = "I can help with Shaijad's projects, skills, experience, education, availability, or contact details.";
+      responseText = "I can help with Shaijad's projects (like QLix or AgriTech), skills, experience, education, availability, or contact details.";
       break;
   }
 
